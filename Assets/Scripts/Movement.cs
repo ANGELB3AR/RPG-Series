@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour
     [SerializeField] Transform target;
 
     NavMeshAgent navMeshAgent;
+    Ray lastRay;
 
     void Awake()
     {
@@ -16,6 +17,12 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetMouseButtonDown(0))
+        {
+            lastRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        }
+        Debug.DrawRay(lastRay.origin, lastRay.direction * 100);
+
         navMeshAgent.SetDestination(target.position);
     }
 }
