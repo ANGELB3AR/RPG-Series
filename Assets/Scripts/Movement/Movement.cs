@@ -17,24 +17,12 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButton(0))
-        {
-            MoveToCursor();
-        }
-
         UpdateAnimator();
     }
 
-    void MoveToCursor()
+    public void MoveTo(Vector3 destination)
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        bool hasHit = Physics.Raycast(ray, out hit);
-
-        if (hasHit)
-        {
-            navMeshAgent.SetDestination(hit.point);
-        }
+        navMeshAgent.SetDestination(destination);
     }
 
     void UpdateAnimator()
