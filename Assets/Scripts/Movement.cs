@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Mover : MonoBehaviour
+public class Movement : MonoBehaviour
 {
     [SerializeField] Transform target;
 
