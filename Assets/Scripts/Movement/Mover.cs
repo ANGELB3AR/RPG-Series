@@ -11,6 +11,7 @@ namespace RPG.Movement
         NavMeshAgent navMeshAgent;
         Animator animator;
         ActionScheduler actionScheduler;
+        Health health;
         string animatorSpeedParam = "forwardSpeed";
 
         void Awake()
@@ -18,10 +19,12 @@ namespace RPG.Movement
             navMeshAgent = GetComponent<NavMeshAgent>();
             animator = GetComponent<Animator>();
             actionScheduler = GetComponent<ActionScheduler>();
+            health = GetComponent<Health>();
         }
 
         void Update()
         {
+            navMeshAgent.enabled = !health.IsDead();
             UpdateAnimator();
         }
 
