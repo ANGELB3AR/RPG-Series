@@ -11,6 +11,7 @@ namespace RPG.Control
     {
         [SerializeField] float chaseDistance = 5f;
         [SerializeField] float suspicionTime = 3f;
+        [SerializeField] PatrolPath patrolPath;
 
         Fighter fighter;
         Health health;
