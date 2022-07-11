@@ -56,17 +56,17 @@ namespace RPG.Control
             timeSinceLastSawPlayer += Time.deltaTime;
         }
 
-        private void AttackBehavior()
+        void AttackBehavior()
         {
             fighter.Attack(player);
         }
 
-        private void SuspicionBehavior()
+        void SuspicionBehavior()
         {
             actionScheduler.CancelCurrentAction();
         }
 
-        private void GuardBehavior()
+        void GuardBehavior()
         {
             mover.StartMoveAction(guardPosition);
         }
