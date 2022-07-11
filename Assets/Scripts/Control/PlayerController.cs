@@ -4,20 +4,24 @@ using UnityEngine;
 using RPG.Movement;
 using System;
 using RPG.Combat;
+using RPG.Core;
 
 namespace RPG.Control
 {
     public class PlayerController : MonoBehaviour
     {
         Mover mover;
+        Health health;
 
         void Awake()
         {
             mover = GetComponent<Mover>();
+            health = GetComponent<Health>();
         }
 
         void Update()
         {
+            if (health.IsDead()) { return; }
             if (InteractWithCombat()) { return; }
             if (InteractWithMovement()) { return; }
             print("Nothing to do");

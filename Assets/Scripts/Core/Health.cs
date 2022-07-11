@@ -19,6 +19,7 @@ namespace RPG.Core
             if (healthPoints == 0 && !isDead)
             {
                 GetComponent<Animator>().SetTrigger(deathAnimParam);
+                GetComponent<ActionScheduler>().CancelCurrentAction();
                 isDead = true;
             }
         }
