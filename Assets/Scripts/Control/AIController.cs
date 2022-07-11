@@ -42,18 +42,33 @@ namespace RPG.Control
             if (InAttackRangeOfPlayer() && fighter.CanAttack(player))
             {
                 timeSinceLastSawPlayer = 0;
-                fighter.Attack(player);
+                AttackBehavior();
             }
             else if (timeSinceLastSawPlayer < suspicionTime)
             {
-                actionScheduler.CancelCurrentAction();
+                SuspicionBehavior();
             }
             else
             {
-                mover.StartMoveAction(guardPosition);
+                GuardBehavior();
             }
 
             timeSinceLastSawPlayer += Time.deltaTime;
+        }
+
+        private void AttackBehavior()
+        {
+            fighter.Attack(player);
+        }
+
+        private void SuspicionBehavior()
+        {
+            actionScheduler.CancelCurrentAction();
+        }
+
+        private void GuardBehavior()
+        {
+            mover.StartMoveAction(guardPosition);
         }
 
         bool InAttackRangeOfPlayer()
