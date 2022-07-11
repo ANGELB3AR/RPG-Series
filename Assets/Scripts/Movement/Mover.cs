@@ -7,7 +7,7 @@ using RPG.Core;
 
 namespace RPG.Movement
 {
-    public class Mover : MonoBehaviour
+    public class Mover : MonoBehaviour, IAction
     {
         NavMeshAgent navMeshAgent;
         Animator animator;
@@ -52,6 +52,11 @@ namespace RPG.Movement
             Vector3 localVelocity = transform.InverseTransformDirection(velocity);
             float speed = localVelocity.z;
             animator.SetFloat(animatorSpeedParam, speed);
+        }
+
+        public void Cancel()
+        {
+            Stop();
         }
     }
 
