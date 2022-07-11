@@ -6,12 +6,21 @@ namespace RPG.Combat
 {
     public class Health : MonoBehaviour
     {
-        [SerializeField] float health = 100f;
+        [SerializeField] float healthPoints = 100f;
+
+        bool isDead = false;
+        string deathAnimParam = "die";
 
         public void TakeDamage(float damage)
         {
-            health = Mathf.Max(health - damage, 0);
-            print(health);
+            healthPoints = Mathf.Max(healthPoints - damage, 0);
+            print(healthPoints);
+
+            if (healthPoints == 0 && !isDead)
+            {
+                GetComponent<Animator>().SetTrigger(deathAnimParam);
+                isDead = true;
+            }
         }
     }
 }
