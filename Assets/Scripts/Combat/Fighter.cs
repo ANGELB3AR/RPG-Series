@@ -18,7 +18,7 @@ namespace RPG.Combat
         Animator animator;
         string attackAnimParam = "attack";
         string stopAttackAnimParam = "stopAttack";
-        float timeSinceLastAttack = 0;
+        float timeSinceLastAttack = Mathf.Infinity;
 
         void Awake()
         {
