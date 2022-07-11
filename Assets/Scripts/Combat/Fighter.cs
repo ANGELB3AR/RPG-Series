@@ -32,6 +32,7 @@ namespace RPG.Combat
             timeSinceLastAttack += Time.deltaTime;
 
             if (target == null) { return; }
+            if (target.IsDead()) { return; }
 
             if (!GetIsInRange())
             {
@@ -76,8 +77,7 @@ namespace RPG.Combat
         // Called from Animation Event
         void Hit()
         {
-            Health healthComponent = target.GetComponent<Health>();
-            healthComponent.TakeDamage(weaponDamange);
+            target.TakeDamage(weaponDamange);
         }
     }
 }
