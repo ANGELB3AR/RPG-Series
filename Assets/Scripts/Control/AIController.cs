@@ -16,7 +16,7 @@ namespace RPG.Control
             }
         }
 
-        private float DistanceToPlayer()
+        float DistanceToPlayer()
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             return Vector3.Distance(transform.position, player.transform.position);
