@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using RPG.Core;
 using RPG.Movement;
+using System;
 
 namespace RPG.Control
 {
@@ -51,7 +52,7 @@ namespace RPG.Control
             }
             else
             {
-                GuardBehavior();
+                PatrolBehavior();
             }
 
             timeSinceLastSawPlayer += Time.deltaTime;
@@ -67,9 +68,35 @@ namespace RPG.Control
             actionScheduler.CancelCurrentAction();
         }
 
-        void GuardBehavior()
+        void PatrolBehavior()
         {
+            Vector3 nextPosition = guardPosition;
+
+            if (patrolPath != null)
+            {
+                if (AtWaypoint())
+                {
+                    CycleWaypoint();
+                }
+                nextPosition = GetCurrentWaypoint();
+            }
+
             mover.StartMoveAction(guardPosition);
+        }
+
+        private bool AtWaypoint()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void CycleWaypoint()
+        {
+            throw new NotImplementedException();
+        }
+
+        private Vector3 GetCurrentWaypoint()
+        {
+            throw new NotImplementedException();
         }
 
         bool InAttackRangeOfPlayer()
