@@ -46,7 +46,7 @@ namespace RPG.Combat
             target = combatTarget.transform;
         }
 
-        // Called from Mover script
+        // Called from ActionScheduler script
         public void Cancel()
         {
             target = null;

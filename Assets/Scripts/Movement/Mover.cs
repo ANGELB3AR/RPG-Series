@@ -37,6 +37,7 @@ namespace RPG.Movement
             navMeshAgent.isStopped = false;
         }
 
+        // Called from ActionScheduler script
         public void Cancel()
         {
             navMeshAgent.isStopped = true;
