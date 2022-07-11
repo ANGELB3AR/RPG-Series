@@ -47,10 +47,9 @@ namespace RPG.Combat
         {
             if (timeSinceLastAttack >= timeBetweenAttacks)
             {
+                // This will trigger the Hit() event
                 animator.SetTrigger(attackAnimParam);
                 timeSinceLastAttack = 0;
-                Health healthComponent = target.GetComponent<Health>();
-                healthComponent.TakeDamage(weaponDamange);
             }
         }
 
@@ -75,7 +74,8 @@ namespace RPG.Combat
         // Called from Animation Event
         void Hit()
         {
-
+            Health healthComponent = target.GetComponent<Health>();
+            healthComponent.TakeDamage(weaponDamange);
         }
     }
 }
