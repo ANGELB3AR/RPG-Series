@@ -14,7 +14,7 @@ namespace RPG.Control
             for (int i = 0; i < transform.childCount; i++)
             {
                 int j = GetNextIndex(i);
-                Gizmos.color = Color.gray;
+                Gizmos.color = Color.red;
                 Gizmos.DrawSphere(GetWaypoint(i), waypointGizmosRadius);
                 Gizmos.DrawLine(GetWaypoint(i), GetWaypoint(j));
             }
@@ -22,14 +22,11 @@ namespace RPG.Control
 
         int GetNextIndex(int i)
         {
-            if (i < transform.childCount)
-            {
-                return i + 1;
-            }
-            else
+            if (i + 1 == transform.childCount)
             {
                 return 0;
             }
+            return i + 1;
             
         }
 
