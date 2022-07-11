@@ -41,8 +41,7 @@ namespace RPG.Control
             }
             else
             {
-                fighter.Cancel();
-                mover.MoveTo(guardPosition);
+                mover.StartMoveAction(guardPosition);
             }
         }
 
