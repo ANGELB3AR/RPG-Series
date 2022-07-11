@@ -8,11 +8,23 @@ namespace RPG.Control
     {
         [SerializeField] float chaseDistance = 5f;
 
+        Animator animator;
+        string attackAnimParam = "attack";
+
+        void Awake()
+        {
+            animator = GetComponent<Animator>();
+        }
+
         void Update()
         {
             if (DistanceToPlayer() <= chaseDistance)
             {
-                Debug.Log(name + " should chase");
+                animator.SetTrigger(attackAnimParam);
+            }
+            else
+            {
+                animator.ResetTrigger(attackAnimParam);
             }
         }
 
