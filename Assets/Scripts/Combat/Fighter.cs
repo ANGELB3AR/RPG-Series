@@ -30,7 +30,7 @@ namespace RPG.Combat
             }
             else
             {
-                mover.Stop();
+                mover.Cancel();
             }
         }
 
@@ -47,14 +47,9 @@ namespace RPG.Combat
         }
 
         // Called from Mover script
-        public void CancelAttack()
-        {
-            target = null;
-        }
-
         public void Cancel()
         {
-            CancelAttack();
+            target = null;
         }
     }
 }

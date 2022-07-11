@@ -31,7 +31,7 @@ namespace RPG.Movement
         public void StartMoveAction(Vector3 destination)
         {
             actionScheduler.StartAction(this);
-            fighter.CancelAttack();
+            fighter.Cancel();
             MoveTo(destination);
         }
 
@@ -41,7 +41,7 @@ namespace RPG.Movement
             navMeshAgent.isStopped = false;
         }
 
-        public void Stop()
+        public void Cancel()
         {
             navMeshAgent.isStopped = true;
         }
@@ -53,11 +53,5 @@ namespace RPG.Movement
             float speed = localVelocity.z;
             animator.SetFloat(animatorSpeedParam, speed);
         }
-
-        public void Cancel()
-        {
-            Stop();
-        }
     }
-
 }
