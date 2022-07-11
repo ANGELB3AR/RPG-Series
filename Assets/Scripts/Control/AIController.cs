@@ -5,6 +5,7 @@ using UnityEngine;
 using RPG.Combat;
 using RPG.Core;
 using RPG.Movement;
+using UnityEngine.AI;
 
 namespace RPG.Control
 {
@@ -15,11 +16,14 @@ namespace RPG.Control
         [SerializeField] PatrolPath patrolPath;
         [SerializeField] float waypointTolerance = 1f;
         [SerializeField] float waypointDwellTime = 3f;
+        [SerializeField] float patrolSpeed = 2.5f;
+        [SerializeField] float chaseSpeed = 4f;
 
         Fighter fighter;
         Health health;
         Mover mover;
         ActionScheduler actionScheduler;
+        NavMeshAgent navMeshAgent;
         GameObject player;
 
         Vector3 guardPosition;
@@ -33,6 +37,7 @@ namespace RPG.Control
             health = GetComponent<Health>();
             mover = GetComponent<Mover>();
             actionScheduler = GetComponent<ActionScheduler>();
+            navMeshAgent = GetComponent<NavMeshAgent>();
             player = GameObject.FindGameObjectWithTag("Player");
         }
 
@@ -71,6 +76,7 @@ namespace RPG.Control
         {
             timeSinceLastSawPlayer = 0;
             fighter.Attack(player);
+            navMeshAgent.speed = chaseSpeed;
         }
 
         void SuspicionBehavior()
@@ -81,6 +87,7 @@ namespace RPG.Control
         void PatrolBehavior()
         {
             Vector3 nextPosition = guardPosition;
+            navMeshAgent.speed = patrolSpeed;
 
             if (patrolPath != null)
             {
