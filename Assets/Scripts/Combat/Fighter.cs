@@ -12,11 +12,12 @@ namespace RPG.Combat
         [SerializeField] float timeBetweenAttacks = 1f;
         [SerializeField] float weaponDamange = 5f;
 
-        Transform target;
+        Health target;
         Mover mover;
         ActionScheduler actionScheduler;
         Animator animator;
         string attackAnimParam = "attack";
+        string stopAttackAnimParam = "stopAttack";
         float timeSinceLastAttack = 0;
 
         void Awake()
@@ -34,7 +35,7 @@ namespace RPG.Combat
 
             if (!GetIsInRange())
             {
-                mover.MoveTo(target.position);
+                mover.MoveTo(target.transform.position);
             }
             else
             {
@@ -55,19 +56,20 @@ namespace RPG.Combat
 
         bool GetIsInRange()
         {
-            return Vector3.Distance(transform.position, target.position) < weaponRange;
+            return Vector3.Distance(transform.position, target.transform.position) < weaponRange;
         }
 
         // Called from PlayerController script
         public void Attack(CombatTarget combatTarget)
         {
             actionScheduler.StartAction(this);
-            target = combatTarget.transform;
+            target = combatTarget.GetComponent<Health>();
         }
 
         // Called from ActionScheduler script
         public void Cancel()
         {
+            animator.SetTrigger(stopAttackAnimParam);
             target = null;
         }
 
