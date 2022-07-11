@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5065204948344905432, guid: 05009980673c7ec44aa6a4700c9c1efc, type: 3}
+      propertyPath: health
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2824269087682805030, guid: 05009980673c7ec44aa6a4700c9c1efc, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -57,6 +61,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05009980673c7ec44aa6a4700c9c1efc, type: 3}
+--- !u!1 &960417516364427591 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2824269087682805030, guid: 05009980673c7ec44aa6a4700c9c1efc, type: 3}
+  m_PrefabInstance: {fileID: 3055067141859822689}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7582163226461584323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960417516364427591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 341bb442f53e9df4c83c146a60c1f286, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!136 &-6678937619892678535
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960417516364427591}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &6623817798042417830 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8181140911892182727, guid: 05009980673c7ec44aa6a4700c9c1efc, type: 3}
