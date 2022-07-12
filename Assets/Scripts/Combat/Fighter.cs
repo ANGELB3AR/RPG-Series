@@ -88,6 +88,7 @@ namespace RPG.Combat
         {
             StopAttack();
             target = null;
+            actionScheduler.CancelCurrentAction();
         }
 
         void StopAttack()
