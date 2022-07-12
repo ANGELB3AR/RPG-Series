@@ -341,7 +341,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 92702564}
-  m_LocalRotation: {x: 0.23292461, y: -0.7088523, z: 0.27209166, w: 0.6076518}
+  m_LocalRotation: {x: 0.01650507, y: -0.7907707, z: 0.021343173, w: 0.61151767}
   m_LocalPosition: {x: -2.3789234, y: 12.52943, z: -4.093541}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -368,7 +368,7 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 0}
+  m_LookAt: {fileID: 373506542}
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
@@ -521,6 +521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 117804182}
   - component: {fileID: 117804183}
+  - component: {fileID: 117804184}
   m_Layer: 0
   m_Name: DollyTrack1
   m_TagString: Untagged
@@ -564,12 +565,32 @@ MonoBehaviour:
   m_Waypoints:
   - position: {x: 9.712807, y: 0, z: 2.8108854}
     roll: 0
-  - position: {x: 0.6384411, y: 0, z: 0.58099747}
+  - position: {x: 0.6384411, y: 0.39006472, z: 0.58099747}
     roll: 0
-  - position: {x: -3.214963, y: 0, z: 1.8990607}
+  - position: {x: -3.214963, y: 1.2138002, z: 1.8990607}
     roll: 0
-  - position: {x: -5.035018, y: 1.210249, z: -1.3610668}
+  - position: {x: -5.035018, y: 2.905835, z: -1.3610668}
     roll: 0
+--- !u!95 &117804184
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117804181}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &125237152
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1959,9 +1980,12 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: 8415521648974324921, guid: e76af1f3a78a64546ae9d1fa598beceb, type: 2}
     value: {fileID: 262397141}
+  - key: {fileID: 6454022107950883441, guid: e76af1f3a78a64546ae9d1fa598beceb, type: 2}
+    value: {fileID: 117804184}
   m_ExposedReferences:
     m_References:
     - ed441999183acd04db781b2e054e78ec: {fileID: 2032949110}
+    - 32700a1c64b135945944bb24063cfc88: {fileID: 92702566}
     - 292d9e2378897ae4f9db7a4a6a18c90e: {fileID: 1838201297}
     - 0543a8cbac342494bbbb5c618717cdea: {fileID: 508816554}
 --- !u!1001 &652049023
@@ -2489,7 +2513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Path: {fileID: 117804183}
   m_PathPosition: 0
-  m_PositionUnits: 0
+  m_PositionUnits: 2
   m_PathOffset: {x: 0, y: 0, z: 0}
   m_XDamping: 0
   m_YDamping: 0
