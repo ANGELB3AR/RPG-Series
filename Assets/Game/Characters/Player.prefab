@@ -33,7 +33,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8181140911892182727, guid: 05009980673c7ec44aa6a4700c9c1efc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 29.7
       objectReference: {fileID: 0}
     - target: {fileID: 8181140911892182727, guid: 05009980673c7ec44aa6a4700c9c1efc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -41,7 +41,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8181140911892182727, guid: 05009980673c7ec44aa6a4700c9c1efc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.48
+      value: -36.6
       objectReference: {fileID: 0}
     - target: {fileID: 8181140911892182727, guid: 05009980673c7ec44aa6a4700c9c1efc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -49,15 +49,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8181140911892182727, guid: 05009980673c7ec44aa6a4700c9c1efc, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8181140911892182727, guid: 05009980673c7ec44aa6a4700c9c1efc, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8181140911892182727, guid: 05009980673c7ec44aa6a4700c9c1efc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8181140911892182727, guid: 05009980673c7ec44aa6a4700c9c1efc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -91,6 +91,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10564a60460ed6e469fb7557502325b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &1935145772
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673269343523115638}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!4 &4719829651163421079 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8181140911892182727, guid: 05009980673c7ec44aa6a4700c9c1efc, type: 3}
