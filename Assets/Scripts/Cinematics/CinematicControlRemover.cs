@@ -1,18 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
-public class CinematicControlRemover : MonoBehaviour
+namespace RPG.Cinematics
 {
-    // Start is called before the first frame update
-    void Start()
+    public class CinematicControlRemover : MonoBehaviour
     {
-        
-    }
+        void Start()
+        {
+            GetComponent<PlayableDirector>().played += DisableControl;
+            GetComponent<PlayableDirector>().stopped += EnableControl;
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        void DisableControl()
+        {
+            print("DisableControl");
+        }
+
+        void EnableControl()
+        {
+            print("EnableControl");
+        }
     }
 }
