@@ -327,6 +327,7 @@ GameObject:
   m_Component:
   - component: {fileID: 92702565}
   - component: {fileID: 92702566}
+  - component: {fileID: 92702567}
   m_Layer: 0
   m_Name: CM Dolly1
   m_TagString: Untagged
@@ -341,7 +342,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 92702564}
-  m_LocalRotation: {x: 0.01650507, y: -0.7907707, z: 0.021343173, w: 0.61151767}
+  m_LocalRotation: {x: 0.016505076, y: -0.7907707, z: 0.021343201, w: 0.61151755}
   m_LocalPosition: {x: -2.3789234, y: 12.52943, z: -4.093541}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -379,7 +380,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7773913, y: 1}
+    m_SensorSize: {x: 1.7783418, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -388,6 +389,26 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 887173375}
+--- !u!95 &92702567
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92702564}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &93133499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1783,7 +1804,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7773913, y: 1}
+    m_SensorSize: {x: 1.7783418, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1980,8 +2001,8 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: 8415521648974324921, guid: e76af1f3a78a64546ae9d1fa598beceb, type: 2}
     value: {fileID: 262397141}
-  - key: {fileID: 6454022107950883441, guid: e76af1f3a78a64546ae9d1fa598beceb, type: 2}
-    value: {fileID: 117804184}
+  - key: {fileID: -7639168279048816591, guid: e76af1f3a78a64546ae9d1fa598beceb, type: 2}
+    value: {fileID: 92702567}
   m_ExposedReferences:
     m_References:
     - ed441999183acd04db781b2e054e78ec: {fileID: 2032949110}
@@ -3810,7 +3831,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7773913, y: 1}
+    m_SensorSize: {x: 1.7783418, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -4265,7 +4286,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7773913, y: 1}
+    m_SensorSize: {x: 1.7783418, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
