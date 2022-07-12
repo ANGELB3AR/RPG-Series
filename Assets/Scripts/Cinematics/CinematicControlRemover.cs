@@ -13,12 +13,12 @@ namespace RPG.Cinematics
             GetComponent<PlayableDirector>().stopped += EnableControl;
         }
 
-        void DisableControl()
+        void DisableControl(PlayableDirector pd)
         {
             print("DisableControl");
         }
 
-        void EnableControl()
+        void EnableControl(PlayableDirector pd)
         {
             print("EnableControl");
         }
