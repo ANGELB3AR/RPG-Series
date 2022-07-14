@@ -14,7 +14,7 @@ namespace RPG.SceneManagement
             StartCoroutine(FadeOutIn());
         }
 
-        IEnumerator FadeOutIn()
+        public IEnumerator FadeOutIn()
         {
             yield return FadeOut(3f);
             print("Faded out");
@@ -22,7 +22,7 @@ namespace RPG.SceneManagement
             print("Faded in");
         }
 
-        IEnumerator FadeOut(float time)
+        public IEnumerator FadeOut(float time)
         {
             while (canvasGroup.alpha < 1)
             {
