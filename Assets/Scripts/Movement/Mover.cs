@@ -38,6 +38,7 @@ namespace RPG.Movement
 
         public void MoveTo(Vector3 destination, float speedFraction)
         {
+            if (!navMeshAgent.enabled) { return; }
             navMeshAgent.SetDestination(destination);
             navMeshAgent.speed = maxSpeed * Mathf.Clamp01(speedFraction);
             navMeshAgent.isStopped = false;
@@ -46,6 +47,7 @@ namespace RPG.Movement
         // Called from ActionScheduler script
         public void Cancel()
         {
+            if (!navMeshAgent.enabled) { return; }
             navMeshAgent.isStopped = true;
         }
 
