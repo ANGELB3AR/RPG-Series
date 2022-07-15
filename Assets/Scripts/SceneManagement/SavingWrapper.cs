@@ -29,12 +29,12 @@ namespace RPG.SceneManagement
 
         }
 
-        void Load()
+        public void Load()
         {
             savingSystem.Load(defaultSaveFile);
         }
 
-        void Save()
+        public void Save()
         {
             savingSystem.Save(defaultSaveFile);
         }
