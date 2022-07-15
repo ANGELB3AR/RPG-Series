@@ -7,7 +7,7 @@ using RPG.Saving;
 
 namespace RPG.Movement
 {
-    public class Mover : MonoBehaviour, IAction//, ISaveable
+    public class Mover : MonoBehaviour, IAction, ISaveable
     {
         [SerializeField] float maxSpeed = 5.67f;
 
@@ -60,14 +60,14 @@ namespace RPG.Movement
             animator.SetFloat(animatorSpeedParam, speed);
         }
 
-        //public object CaptureState()
-        //{
-        //    return new SerializableVector3(transform.position);
-        //}
+        public object CaptureState()
+        {
+            return new SerializableVector3(transform.position);
+        }
 
-        //public void RestoreState(object state)
-        //{
-        //    throw new System.NotImplementedException();
-        //}
+        public void RestoreState(object state)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
