@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using RPG.Core;
+using RPG.Saving;
 
 namespace RPG.Movement
 {
-    public class Mover : MonoBehaviour, IAction
+    public class Mover : MonoBehaviour, IAction//, ISaveable
     {
         [SerializeField] float maxSpeed = 5.67f;
 
@@ -58,5 +59,15 @@ namespace RPG.Movement
             float speed = localVelocity.z;
             animator.SetFloat(animatorSpeedParam, speed);
         }
+
+        //public object CaptureState()
+        //{
+        //    return new SerializableVector3(transform.position);
+        //}
+
+        //public void RestoreState(object state)
+        //{
+        //    throw new System.NotImplementedException();
+        //}
     }
 }

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 913149312142706005}
   - component: {fileID: 3841639657832967168}
   - component: {fileID: -5065204948344905432}
+  - component: {fileID: -3572146243412182051}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -71,6 +72,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52d54c83efd0d0b44919a3fcaf382489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxSpeed: 5.67
 --- !u!95 &2096721515878398542
 Animator:
   serializedVersion: 4
@@ -105,7 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponRange: 2
   timeBetweenAttacks: 1
-  weaponDamange: 5
+  weaponDamage: 5
 --- !u!114 &3841639657832967168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,4 +132,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fd4174d2e1895442bf97813d639be20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  healthPoints: 100
+--- !u!114 &-3572146243412182051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2824269087682805030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea9374b509b70f4bba37e4a2ca8cf00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniqueIdentifier: 
