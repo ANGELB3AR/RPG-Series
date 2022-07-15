@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
-using RPG.Saving;
 
 namespace RPG.Cinematics
 {
-    public class CinematicTrigger : MonoBehaviour, ISaveable
+    public class CinematicTrigger : MonoBehaviour
     {
-        bool hasPlayed = false;
+        [SerializeField] bool hasPlayed = false;
 
         void OnTriggerEnter(Collider other)
         {
@@ -17,16 +16,6 @@ namespace RPG.Cinematics
                 GetComponent<PlayableDirector>().Play();
                 hasPlayed = true;
             }
-        }
-
-        public object CaptureState()
-        {
-            return hasPlayed;
-        }
-
-        public void RestoreState(object state)
-        {
-            hasPlayed = (bool)state;
         }
     }
 }
