@@ -8,7 +8,7 @@ namespace RPG.Cinematics
 {
     public class CinematicTrigger : MonoBehaviour, ISaveable
     {
-        [SerializeField] bool hasPlayed = false;
+        bool hasPlayed = false;
 
         void OnTriggerEnter(Collider other)
         {
