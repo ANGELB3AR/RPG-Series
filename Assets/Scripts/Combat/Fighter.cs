@@ -10,7 +10,7 @@ namespace RPG.Combat
     {
         [SerializeField] float timeBetweenAttacks = 1f;
         [SerializeField] Transform handTransform = null;
-        [SerializeField] WeaponSO defaultWeapon = null;
+        [SerializeField] Weapon defaultWeapon = null;
 
         Health target;
         Mover mover;
@@ -19,7 +19,7 @@ namespace RPG.Combat
         string attackAnimParam = "attack";
         string stopAttackAnimParam = "stopAttack";
         float timeSinceLastAttack = Mathf.Infinity;
-        WeaponSO currentWeapon = null;
+        Weapon currentWeapon = null;
 
         void Awake()
         {
@@ -110,7 +110,7 @@ namespace RPG.Combat
             target.TakeDamage(currentWeapon.GetDamage());
         }
 
-        public void EquipWeapon(WeaponSO weapon)
+        public void EquipWeapon(Weapon weapon)
         {
             currentWeapon = weapon;
             weapon.Spawn(handTransform, animator);

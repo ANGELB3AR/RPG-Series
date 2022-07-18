@@ -6,7 +6,7 @@ namespace RPG.Combat
 {
     public class WeaponPickup : MonoBehaviour
     {
-        [SerializeField] WeaponSO weapon = null;
+        [SerializeField] Weapon weapon = null;
 
         void OnTriggerEnter(Collider other)
         {
