@@ -8,8 +8,10 @@ namespace RPG.Combat
 {
     public class Projectile : MonoBehaviour
     {
-        Health target = null;
         [SerializeField] float projectileSpeed = 1f;
+        
+        Health target = null;
+        float damage = 0f;
 
         void Update()
         {
@@ -19,9 +21,10 @@ namespace RPG.Combat
             FireProjectile();
         }
 
-        public void SetTarget(Health target)
+        public void SetTarget(Health target, float damage)
         {
             this.target = target;
+            this.damage = damage;
         }
 
         void AimAtTarget()
@@ -42,6 +45,14 @@ namespace RPG.Combat
         void FireProjectile()
         {
             transform.Translate(Vector3.forward * projectileSpeed * Time.deltaTime);
+        }
+
+        void OnTriggerEnter(Collider other)
+        {
+            if (other.GetComponent<Health>() != target) { return; }
+
+            target.TakeDamage(damage);
+            Destroy(gameObject);
         }
     }
 }
