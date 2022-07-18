@@ -11,6 +11,9 @@ namespace RPG.Combat
         [SerializeField] float weaponRange = 2f;
         [SerializeField] float timeBetweenAttacks = 1f;
         [SerializeField] float weaponDamage = 5f;
+        [SerializeField] GameObject weaponPrefab = null;
+        [SerializeField] Transform handTransform = null;
+        [SerializeField] AnimatorOverrideController swordOverride = null;
 
         Health target;
         Mover mover;
@@ -25,6 +28,11 @@ namespace RPG.Combat
             mover = GetComponent<Mover>();
             actionScheduler = GetComponent<ActionScheduler>();
             animator = GetComponent<Animator>();
+        }
+
+        void Start()
+        {
+            SpawnWeapon();
         }
 
         void Update()
@@ -102,6 +110,12 @@ namespace RPG.Combat
         {
             if (target == null) { return; }
             target.TakeDamage(weaponDamage);
+        }
+
+        void SpawnWeapon()
+        {
+            Instantiate(weaponPrefab, handTransform);
+            animator.runtimeAnimatorController = swordOverride;
         }
     }
 }
