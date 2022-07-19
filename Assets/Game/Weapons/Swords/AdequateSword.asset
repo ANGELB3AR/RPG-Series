@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: AdequateSword
   m_EditorClassIdentifier: 
   animatorOverride: {fileID: 22100000, guid: 3a343dc17d2502d4f8854e317eab307f, type: 2}
-  equippedPrefab: {fileID: 3869353081026101632, guid: b0667a67c6fc8794ab6d0bf3fca4be56, type: 3}
+  equippedPrefab: {fileID: 8957457978437599033, guid: f545b5009882cad438e802228726c850, type: 3}
   weaponRange: 2
   weaponDamage: 8
   isRightHanded: 1
+  projectile: {fileID: 0}

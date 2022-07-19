@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SimpleBow
   m_EditorClassIdentifier: 
   animatorOverride: {fileID: 22100000, guid: a8bdf5a670cdc04438fb02ad98f89f66, type: 2}
-  equippedPrefab: {fileID: 7357072529624424710, guid: 3ce64664d9e1af34da50c2da04f1b9ec, type: 3}
+  equippedPrefab: {fileID: 8501230194476906838, guid: 0bd445027daf0ab4a877f8d3df5f0433, type: 3}
   weaponRange: 15
   weaponDamage: 5
   isRightHanded: 0
