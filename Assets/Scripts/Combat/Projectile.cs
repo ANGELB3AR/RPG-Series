@@ -11,6 +11,7 @@ namespace RPG.Combat
         [SerializeField] float projectileSpeed = 1f;
         [SerializeField] bool isHoming = false;
         [SerializeField] GameObject hitEffect = null;
+        [SerializeField] float maxLifetime = 10f;
         
         Health target = null;
         float damage = 0f;
@@ -34,6 +35,8 @@ namespace RPG.Combat
         {
             this.target = target;
             this.damage = damage;
+
+            Destroy(gameObject, maxLifetime);
         }
 
         void AimAtTarget()
