@@ -24,7 +24,7 @@ namespace RPG.Combat
         {
             if (target == null) { return; }
 
-            if (isHoming) { AimAtTarget(); }
+            if (isHoming && !target.IsDead()) { AimAtTarget(); }
 
             FireProjectile();
         }
@@ -58,7 +58,7 @@ namespace RPG.Combat
         void OnTriggerEnter(Collider other)
         {
             if (other.GetComponent<Health>() != target) { return; }
-
+            if (target.IsDead()) { return; }
             target.TakeDamage(damage);
             Destroy(gameObject);
         }
