@@ -28,12 +28,20 @@ namespace RPG.Combat
 
         void HidePickup()
         {
-            throw new NotImplementedException();
+            GetComponent<Collider>().enabled = false;
+            foreach (Transform child in transform)
+            {
+                child.gameObject.SetActive(false);
+            }
         }
 
         void ShowPickup()
         {
-            throw new NotImplementedException();
+            GetComponent<Collider>().enabled = true;
+            foreach (Transform child in transform)
+            {
+                child.gameObject.SetActive(true);
+            }
         }
     }
 }
