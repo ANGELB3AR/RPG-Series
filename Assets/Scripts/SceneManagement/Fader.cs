@@ -35,6 +35,5 @@ namespace RPG.SceneManagement
                 yield return null;
             }
         }
-
     }
 }
