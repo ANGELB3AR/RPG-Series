@@ -60,11 +60,13 @@ namespace RPG.Combat
         {
             if (other.GetComponent<Health>() != target) { return; }
             if (target.IsDead()) { return; }
+
+            target.TakeDamage(damage);
+
             if (hitEffect != null)
             {
-                Instantiate(hitEffect, transform.position, Quaternion.identity);
+                Instantiate(hitEffect, transform.position, transform.rotation);
             }
-            target.TakeDamage(damage);
             Destroy(gameObject);
         }
     }

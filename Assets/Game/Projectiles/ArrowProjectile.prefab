@@ -47,6 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 30
+  isHoming: 0
+  hitEffect: {fileID: 3717789395301672504, guid: b4bd425b1ced9b348a6dabda8556f7f2, type: 3}
 --- !u!135 &6429296081729929996
 SphereCollider:
   m_ObjectHideFlags: 0
