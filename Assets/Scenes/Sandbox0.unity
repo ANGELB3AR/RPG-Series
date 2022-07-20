@@ -283,7 +283,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 92702564}
-  m_LocalRotation: {x: 0.478814, y: 0.42985886, z: -0.29064602, w: 0.708155}
+  m_LocalRotation: {x: 0.015312346, y: 0.90608674, z: -0.42153174, w: 0.032914042}
   m_LocalPosition: {x: -2.3789234, y: 12.52943, z: -4.093541}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -986,7 +986,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &332404794
 Transform:
   m_ObjectHideFlags: 0
@@ -2303,7 +2303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Path: {fileID: 117804183}
-  m_PathPosition: 1
+  m_PathPosition: 0.8202584
   m_PositionUnits: 2
   m_PathOffset: {x: 0, y: 0, z: 0}
   m_XDamping: 0
@@ -2903,6 +2903,10 @@ PrefabInstance:
       propertyPath: defaultWeapon
       value: 
       objectReference: {fileID: 11400000, guid: babd8dec50e6a524a82d6368979b9870, type: 2}
+    - target: {fileID: 3064495859127689746, guid: 3439dfe9a7ffb6944bb8bb48eb3c1c18, type: 3}
+      propertyPath: defaultWeaponName
+      value: Fireball
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3439dfe9a7ffb6944bb8bb48eb3c1c18, type: 3}
 --- !u!1001 &1308703085
