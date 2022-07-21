@@ -11,11 +11,11 @@ namespace RPG.Stats
         class ProgressionCharacterClass
         {
             [SerializeField] CharacterClass characterClass;
-            [SerializeField] Level[] levels;
+            [SerializeField] CharacterLevels[] levels;
         }
 
         [System.Serializable]
-        class Level
+        class CharacterLevels
         {
             [SerializeField] float health;
             [SerializeField] float attack;
