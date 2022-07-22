@@ -14,6 +14,11 @@ namespace RPG.Attributes
             experiencePoints += XP;
         }
 
+        public float GetCurrentExperience()
+        {
+            return experiencePoints;
+        }
+
         public object CaptureState()
         {
             return experiencePoints;

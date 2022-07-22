@@ -6,34 +6,38 @@ using RPG.Combat;
 
 namespace RPG.Attributes
 {
-    public class HealthDisplay : MonoBehaviour
+    public class HUDDisplay : MonoBehaviour
     {
         [SerializeField] TextMeshProUGUI playerHealthText;
         [SerializeField] TextMeshProUGUI enemyHealthText;
+        [SerializeField] TextMeshProUGUI xpText;
 
         Fighter playerFighter;
         Health playerHealth;
         Health enemyHealth;
+        Experience playerXP;
 
         void Awake()
         {
             var player = GameObject.FindGameObjectWithTag("Player");
             playerHealth = player.GetComponent<Health>();
             playerFighter = player.GetComponent<Fighter>();
+            playerXP = player.GetComponent<Experience>();
         }
 
         void Update()
         {
             DisplayPlayerHealth();
             DisplayEnemyHealth();
+            DisplayXP();
         }
 
-        private void DisplayPlayerHealth()
+        void DisplayPlayerHealth()
         {
             playerHealthText.text = $"Health: {playerHealth.GetPercentage().ToString()}%";
         }
 
-        private void DisplayEnemyHealth()
+        void DisplayEnemyHealth()
         {
             enemyHealth = playerFighter.GetTarget();
 
@@ -45,6 +49,11 @@ namespace RPG.Attributes
             {
                 enemyHealthText.text = $"Enemy: {enemyHealth.GetPercentage().ToString()}%";
             }
+        }
+
+        void DisplayXP()
+        {
+            xpText.text = $"XP: {playerXP.GetCurrentExperience().ToString()}";
         }
     }
 }
