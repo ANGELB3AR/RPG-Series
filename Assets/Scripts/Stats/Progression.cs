@@ -5,6 +5,7 @@ namespace RPG.Stats
     [CreateAssetMenu(fileName = "Progression", menuName = "Stats/New Progression", order = 0)]
     public class Progression : ScriptableObject
     {
+        [NonReorderable]
         [SerializeField] ProgressionCharacterClass[] characterClasses = null;
 
         [System.Serializable]
@@ -18,7 +19,7 @@ namespace RPG.Stats
         class CharacterLevel
         {
             [SerializeField] float health;
-            [SerializeField] float attack;
+            [SerializeField] float attackDamage;
         }
     }
 }
