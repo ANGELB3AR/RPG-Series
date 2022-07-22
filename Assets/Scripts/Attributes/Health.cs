@@ -1,6 +1,7 @@
 using UnityEngine;
 using RPG.Core;
 using RPG.Saving;
+using RPG.Stats;
 
 namespace RPG.Attributes
 {
@@ -10,6 +11,11 @@ namespace RPG.Attributes
 
         bool isDead = false;
         string deathAnimParam = "die";
+
+        void Start()
+        {
+            healthPoints = GetComponent<BaseStats>().GetHealth();
+        }
 
         public void TakeDamage(float damage)
         {
