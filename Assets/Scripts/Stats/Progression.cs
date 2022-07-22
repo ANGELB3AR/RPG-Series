@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 namespace RPG.Stats
 {
@@ -7,6 +8,8 @@ namespace RPG.Stats
     {
         [NonReorderable]
         [SerializeField] ProgressionCharacterClass[] characterClasses = null;
+
+        Dictionary<CharacterClass, int[]> lookupTable = null;
 
         public float GetHealth(CharacterClass characterClass, int level)
         {
