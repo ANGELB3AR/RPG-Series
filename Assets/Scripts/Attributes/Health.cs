@@ -45,7 +45,7 @@ namespace RPG.Attributes
 
         public float GetPercentage()
         {
-            return 100 * healthPoints / Mathf.Round(baseStats.GetHealth());
+            return Mathf.Round(100 * healthPoints / baseStats.GetHealth());
         }
 
         public bool IsDead()
