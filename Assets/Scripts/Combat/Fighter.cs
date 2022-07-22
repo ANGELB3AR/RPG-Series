@@ -86,6 +86,11 @@ namespace RPG.Combat
             return targetToTest != null && !targetToTest.IsDead();
         }
 
+        public Health GetTarget()
+        {
+            return target;
+        }
+
         // Called from PlayerController script
         public void Attack(GameObject combatTarget)
         {

@@ -9,12 +9,18 @@ namespace RPG.Attributes
     {
         [SerializeField] float healthPoints = 100f;
 
+        BaseStats baseStats;
         bool isDead = false;
         string deathAnimParam = "die";
 
+        void Awake()
+        {
+            baseStats = GetComponent<BaseStats>();
+        }
+
         void Start()
         {
-            healthPoints = GetComponent<BaseStats>().GetHealth();
+            healthPoints = baseStats.GetHealth();
         }
 
         public void TakeDamage(float damage)
@@ -39,7 +45,7 @@ namespace RPG.Attributes
 
         public float GetPercentage()
         {
-            return 100 * healthPoints / Mathf.Round(GetComponent<BaseStats>().GetHealth());
+            return 100 * healthPoints / Mathf.Round(baseStats.GetHealth());
         }
 
         public bool IsDead()
