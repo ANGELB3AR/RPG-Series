@@ -17,47 +17,67 @@ MonoBehaviour:
     levels:
     - health: 50
       attackDamage: 5
+      experienceReward: 0
     - health: 75
       attackDamage: 8
+      experienceReward: 0
     - health: 100
       attackDamage: 10
+      experienceReward: 0
     - health: 120
       attackDamage: 15
+      experienceReward: 0
     - health: 150
       attackDamage: 20
+      experienceReward: 0
   - characterClass: 1
     levels:
     - health: 10
       attackDamage: 3
+      experienceReward: 5
     - health: 15
       attackDamage: 5
+      experienceReward: 7
     - health: 20
       attackDamage: 8
+      experienceReward: 10
     - health: 25
       attackDamage: 10
+      experienceReward: 12
     - health: 30
       attackDamage: 15
+      experienceReward: 15
   - characterClass: 2
     levels:
     - health: 10
       attackDamage: 10
+      experienceReward: 10
     - health: 10
       attackDamage: 12
+      experienceReward: 12
     - health: 15
       attackDamage: 15
+      experienceReward: 15
     - health: 15
       attackDamage: 17
+      experienceReward: 17
     - health: 20
       attackDamage: 20
+      experienceReward: 20
   - characterClass: 3
     levels:
     - health: 10
       attackDamage: 5
+      experienceReward: 7
     - health: 10
       attackDamage: 8
+      experienceReward: 10
     - health: 15
       attackDamage: 10
+      experienceReward: 12
     - health: 15
       attackDamage: 13
+      experienceReward: 15
     - health: 20
       attackDamage: 15
+      experienceReward: 20
