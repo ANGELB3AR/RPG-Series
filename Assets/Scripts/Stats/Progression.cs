@@ -20,6 +20,18 @@ namespace RPG.Stats
             return 0;
         }
 
+        public float GetExperienceReward(CharacterClass characterClass, int level)
+        {
+            foreach (ProgressionCharacterClass progressionClass in characterClasses)
+            {
+                if (progressionClass.characterClass == characterClass)
+                {
+                    return progressionClass.levels[level - 1].experienceReward;
+                }
+            }
+            return 0;
+        }
+
         [System.Serializable]
         class ProgressionCharacterClass
         {
