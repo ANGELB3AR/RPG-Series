@@ -9,31 +9,50 @@ namespace RPG.Stats
         [NonReorderable]
         [SerializeField] ProgressionCharacterClass[] characterClasses = null;
 
-        Dictionary<CharacterClass, int[]> lookupTable = null;
+        //Dictionary<CharacterClass, Dictionary<int[], float>> lookupTable = null;
 
-        public float GetHealth(CharacterClass characterClass, int level)
-        {
-            foreach (ProgressionCharacterClass progressionClass in characterClasses)
-            {
-                if (progressionClass.characterClass == characterClass)
-                {
-                    return progressionClass.levels[level - 1].health;
-                }
-            }
-            return 0;
-        }
+        //void BuildLookup()
+        //{
+        //    if (lookupTable != null) { return; }
 
-        public float GetExperienceReward(CharacterClass characterClass, int level)
-        {
-            foreach (ProgressionCharacterClass progressionClass in characterClasses)
-            {
-                if (progressionClass.characterClass == characterClass)
-                {
-                    return progressionClass.levels[level - 1].experienceReward;
-                }
-            }
-            return 0;
-        }
+        //    lookupTable = new Dictionary<CharacterClass, Dictionary<int[], float>>();
+
+        //    foreach (ProgressionCharacterClass progressionClass in characterClasses)
+        //    {
+        //        var levelLookupTable = new Dictionary<int[], float>();
+
+        //        foreach (CharacterLevel level in ProgressionCharacterClass.levels)
+        //        {
+        //            levelLookupTable[level] = CharacterLevel.health;
+        //        }
+
+        //        lookupTable[progressionClass.characterClass] = levelLookupTable;
+        //    }
+        //}
+
+        //public float GetHealth(CharacterClass characterClass, int level)
+        //{
+        //    foreach (ProgressionCharacterClass progressionClass in characterClasses)
+        //    {
+        //        if (progressionClass.characterClass == characterClass)
+        //        {
+        //            return progressionClass.levels[level - 1].health;
+        //        }
+        //    }
+        //    return 0;
+        //}
+
+        //public float GetExperienceReward(CharacterClass characterClass, int level)
+        //{
+        //    foreach (ProgressionCharacterClass progressionClass in characterClasses)
+        //    {
+        //        if (progressionClass.characterClass == characterClass)
+        //        {
+        //            return progressionClass.levels[level - 1].experienceReward;
+        //        }
+        //    }
+        //    return 0;
+        //}
 
         [System.Serializable]
         class ProgressionCharacterClass
