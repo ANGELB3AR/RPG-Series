@@ -2,6 +2,7 @@ using UnityEngine;
 using RPG.Core;
 using RPG.Saving;
 using RPG.Stats;
+using System;
 
 namespace RPG.Attributes
 {
@@ -31,7 +32,16 @@ namespace RPG.Attributes
             if (healthPoints == 0 && !isDead)
             {
                 Die();
+                AwardExperience(instigator);
             }
+        }
+
+        void AwardExperience(GameObject instigator)
+        {
+            Experience experience = instigator.GetComponent<Experience>();
+            if (experience == null) { return; }
+
+            experience.GainExperience(baseStats.GetExperienceReward());
         }
 
         void Die()
