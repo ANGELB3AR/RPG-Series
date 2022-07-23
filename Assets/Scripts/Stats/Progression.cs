@@ -9,11 +9,7 @@ namespace RPG.Stats
         [NonReorderable]
         [SerializeField] ProgressionCharacterClass[] characterClasses = null;
 
-<<<<<<< HEAD
-        Dictionary<CharacterClass, CharacterLevel[]> lookupTable = null;
-=======
         Dictionary<CharacterClass, CharacterLevel[]> statLookupTable = null;
->>>>>>> Stat-Dictionary
 
         void BuildLookup()
         {
