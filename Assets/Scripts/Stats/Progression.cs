@@ -9,18 +9,18 @@ namespace RPG.Stats
         [NonReorderable]
         [SerializeField] ProgressionCharacterClass[] characterClasses = null;
 
-        Dictionary<CharacterClass, CharacterLevel> lookupTable = null;
+        Dictionary<CharacterClass, CharacterLevel[]> lookupTable = null;
 
         void BuildLookup()
         {
             if (lookupTable != null) { return; }
 
-            lookupTable = new Dictionary<CharacterClass, CharacterLevel>();
+            lookupTable = new Dictionary<CharacterClass, CharacterLevel[]>();
 
             foreach (ProgressionCharacterClass progressionClass in characterClasses)
             {
                 CharacterLevel[] levels = progressionClass.levels;
-                lookupTable[progressionClass.characterClass] = levels[];
+                lookupTable[progressionClass.characterClass] = levels;
             }
         }
 
