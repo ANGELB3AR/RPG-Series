@@ -36,7 +36,7 @@ namespace RPG.Stats
             return lookupTable[characterClass][level - 1].attackDamage;
         }
 
-        public float GetExperience(CharacterClass characterClass, int level)
+        public float GetExperienceReward(CharacterClass characterClass, int level)
         {
             BuildLookup();
             return lookupTable[characterClass][level - 1].experienceReward;
