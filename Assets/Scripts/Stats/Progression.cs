@@ -24,6 +24,26 @@ namespace RPG.Stats
             }
         }
 
+        public float GetHealth(CharacterClass characterClass, int level)
+        {
+            BuildLookup();
+            return lookupTable[characterClass][level - 1].health;
+        }
+
+        public float GetAttackDamage(CharacterClass characterClass, int level)
+        {
+            BuildLookup();
+            return lookupTable[characterClass][level - 1].attackDamage;
+        }
+
+        public float GetExperience(CharacterClass characterClass, int level)
+        {
+            BuildLookup();
+            return lookupTable[characterClass][level - 1].experienceReward;
+        }
+
+
+
         //public float GetHealth(CharacterClass characterClass, int level)
         //{
         //    foreach (ProgressionCharacterClass progressionClass in characterClasses)
