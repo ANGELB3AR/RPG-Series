@@ -9,26 +9,20 @@ namespace RPG.Stats
         [NonReorderable]
         [SerializeField] ProgressionCharacterClass[] characterClasses = null;
 
-        //Dictionary<CharacterClass, Dictionary<int[], float>> lookupTable = null;
+        Dictionary<CharacterClass, CharacterLevel> lookupTable = null;
 
-        //void BuildLookup()
-        //{
-        //    if (lookupTable != null) { return; }
+        void BuildLookup()
+        {
+            if (lookupTable != null) { return; }
 
-        //    lookupTable = new Dictionary<CharacterClass, Dictionary<int[], float>>();
+            lookupTable = new Dictionary<CharacterClass, CharacterLevel>();
 
-        //    foreach (ProgressionCharacterClass progressionClass in characterClasses)
-        //    {
-        //        var levelLookupTable = new Dictionary<int[], float>();
-
-        //        foreach (CharacterLevel level in ProgressionCharacterClass.levels)
-        //        {
-        //            levelLookupTable[level] = CharacterLevel.health;
-        //        }
-
-        //        lookupTable[progressionClass.characterClass] = levelLookupTable;
-        //    }
-        //}
+            foreach (ProgressionCharacterClass progressionClass in characterClasses)
+            {
+                CharacterLevel[] levels = progressionClass.levels;
+                lookupTable[progressionClass.characterClass] = levels[];
+            }
+        }
 
         //public float GetHealth(CharacterClass characterClass, int level)
         //{
