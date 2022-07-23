@@ -9,7 +9,7 @@ namespace RPG.Stats
         [NonReorderable]
         [SerializeField] ProgressionCharacterClass[] characterClasses = null;
 
-        Dictionary<CharacterClass, int[]> lookupTable = null;
+        Dictionary<CharacterClass, CharacterLevel[]> lookupTable = null;
 
         public float GetHealth(CharacterClass characterClass, int level)
         {
