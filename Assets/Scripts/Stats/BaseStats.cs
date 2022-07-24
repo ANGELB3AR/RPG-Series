@@ -24,20 +24,12 @@ namespace RPG.Stats
 
         public float GetExperienceReward()
         {
-            return progression.GetExperience(characterClass, currentLevel);
+            return progression.GetExperienceReward(characterClass, currentLevel);
         }
 
         public int GetCurrentLevel()
         {
-            float currentXP = GetComponent<Experience>().GetCurrentExperience();
-            for (int i = 0; i < progression.GetLevelCount(CharacterClass.Player); i++)
-            {
-                if (progression.GetExperience(CharacterClass.Player, i) > currentXP)
-                {
-                    return i;
-                }
-            }
-            return progression.GetLevelCount(CharacterClass.Player) + 1;
+
         }
     }
 }
