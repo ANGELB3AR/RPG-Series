@@ -9,6 +9,21 @@ namespace RPG.Stats
         [SerializeField] CharacterClass characterClass;
         [SerializeField] Progression progression = null;
 
+        private void Start()
+        {
+            currentLevel = CalculateCurrentLevel();
+        }
+
+        void Update()
+        {
+            int newLevel = CalculateCurrentLevel();
+            if (newLevel > currentLevel)
+            {
+                currentLevel = newLevel;
+                print("Leveled up!");
+            }
+        }
+
         public float GetHealth()
         {
             return progression.GetHealth(characterClass, currentLevel);
@@ -20,6 +35,11 @@ namespace RPG.Stats
         }
 
         public int GetCurrentLevel()
+        {
+            return currentLevel;
+        }
+
+        public int CalculateCurrentLevel()
         {
             float currentXP = GetComponent<Experience>().GetCurrentExperience();
             int maxLevel = progression.GetLevelCount(CharacterClass.Player);
