@@ -34,9 +34,9 @@ namespace RPG.Stats
             for (int level = 1; level < maxLevel; level++)
             {
                 float XPRequired = progression.GetExperienceRequired(CharacterClass.Player, level);
-                if (XPRequired > currentXP)
+                if (XPRequired >= currentXP)
                 {
-                    return level - 1;
+                    return level;
                 }
             }
             return maxLevel;
