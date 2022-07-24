@@ -36,10 +36,16 @@ namespace RPG.Stats
             return statLookupTable[characterClass][level - 1].attackDamage;
         }
 
-        public float GetExperienceReward(CharacterClass characterClass, int level)
+        public float GetExperience(CharacterClass characterClass, int level)
         {
             BuildLookup();
             return statLookupTable[characterClass][level - 1].experienceReward;
+        }
+
+        public int GetLevelCount(CharacterClass characterClass)
+        {
+            BuildLookup();
+            return statLookupTable[characterClass].Length;
         }
 
         [System.Serializable]
