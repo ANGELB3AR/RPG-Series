@@ -21,7 +21,7 @@ namespace RPG.Stats
 
         public int GetCurrentLevel()
         {
-            GetComponent<Experience>();
+            float currentXP = GetComponent<Experience>().GetCurrentExperience();
         }
     }
 }
