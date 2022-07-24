@@ -12,11 +12,13 @@ namespace RPG.Attributes
         [SerializeField] TextMeshProUGUI playerHealthText;
         [SerializeField] TextMeshProUGUI enemyHealthText;
         [SerializeField] TextMeshProUGUI xpText;
+        [SerializeField] TextMeshProUGUI currentLevelText;
 
         Fighter playerFighter;
         Health playerHealth;
         Health enemyHealth;
         Experience playerXP;
+        BaseStats baseStats;
 
         void Awake()
         {
@@ -24,6 +26,7 @@ namespace RPG.Attributes
             playerHealth = player.GetComponent<Health>();
             playerFighter = player.GetComponent<Fighter>();
             playerXP = player.GetComponent<Experience>();
+            baseStats = player.GetComponent<BaseStats>();
         }
 
         void Update()
@@ -31,6 +34,7 @@ namespace RPG.Attributes
             DisplayPlayerHealth();
             DisplayEnemyHealth();
             DisplayXP();
+            DisplayCurrentLevel();
         }
 
         void DisplayPlayerHealth()
@@ -55,6 +59,11 @@ namespace RPG.Attributes
         void DisplayXP()
         {
             xpText.text = $"XP: {playerXP.GetCurrentExperience().ToString()}";
+        }
+
+        void DisplayCurrentLevel()
+        {
+            currentLevelText.text = $"Level: {baseStats.GetCurrentLevel().ToString()}";
         }
     }
 }
