@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using RPG.Combat;
+using RPG.Stats;
 
 namespace RPG.Attributes
 {
