@@ -61,6 +61,7 @@ namespace RPG.Stats
             public float health;
             public float attackDamage;
             public float experienceReward;
+            public float experienceToLevelUp;
         }
     }
 }

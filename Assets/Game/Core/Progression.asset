@@ -17,67 +17,87 @@ MonoBehaviour:
     levels:
     - health: 50
       attackDamage: 5
-      experienceReward: 40
+      experienceReward: 0
+      experienceToLevelUp: 10
     - health: 75
       attackDamage: 8
-      experienceReward: 60
+      experienceReward: 0
+      experienceToLevelUp: 20
     - health: 100
       attackDamage: 10
-      experienceReward: 75
+      experienceReward: 0
+      experienceToLevelUp: 30
     - health: 120
       attackDamage: 15
-      experienceReward: 100
+      experienceReward: 0
+      experienceToLevelUp: 40
     - health: 150
       attackDamage: 20
-      experienceReward: 130
+      experienceReward: 0
+      experienceToLevelUp: 50
   - characterClass: 1
     levels:
     - health: 10
       attackDamage: 3
       experienceReward: 5
+      experienceToLevelUp: 0
     - health: 15
       attackDamage: 5
       experienceReward: 7
+      experienceToLevelUp: 0
     - health: 20
       attackDamage: 8
       experienceReward: 10
+      experienceToLevelUp: 0
     - health: 25
       attackDamage: 10
       experienceReward: 12
+      experienceToLevelUp: 0
     - health: 30
       attackDamage: 15
       experienceReward: 15
+      experienceToLevelUp: 0
   - characterClass: 2
     levels:
     - health: 10
       attackDamage: 10
       experienceReward: 10
+      experienceToLevelUp: 0
     - health: 10
       attackDamage: 12
       experienceReward: 12
+      experienceToLevelUp: 0
     - health: 15
       attackDamage: 15
       experienceReward: 15
+      experienceToLevelUp: 0
     - health: 15
       attackDamage: 17
       experienceReward: 17
+      experienceToLevelUp: 0
     - health: 20
       attackDamage: 20
       experienceReward: 20
+      experienceToLevelUp: 0
   - characterClass: 3
     levels:
     - health: 10
       attackDamage: 5
       experienceReward: 7
+      experienceToLevelUp: 0
     - health: 10
       attackDamage: 8
       experienceReward: 10
+      experienceToLevelUp: 0
     - health: 15
       attackDamage: 10
       experienceReward: 12
+      experienceToLevelUp: 0
     - health: 15
       attackDamage: 13
       experienceReward: 15
+      experienceToLevelUp: 0
     - health: 20
       attackDamage: 15
       experienceReward: 20
+      experienceToLevelUp: 0

@@ -13,7 +13,8 @@ namespace RPG.Stats
         {
             if (gameObject.CompareTag("Player"))
             {
-                print($"Player level: {GetCurrentLevel()}");
+                //print($"Player level: {GetCurrentLevel()}");
+                print($"Player Level Count: {progression.GetLevelCount(CharacterClass.Player)}");
             }
         }
 
@@ -27,9 +28,10 @@ namespace RPG.Stats
             return progression.GetExperienceReward(characterClass, currentLevel);
         }
 
-        public int GetCurrentLevel()
-        {
+        //public int GetCurrentLevel()
+        //{
+        //    float currentXP = GetComponent<Experience>().GetCurrentExperience();
 
-        }
+        //}
     }
 }
