@@ -42,6 +42,13 @@ namespace RPG.Stats
             return statLookupTable[characterClass][level - 1].experienceReward;
         }
 
+        public float GetExperienceRequired(CharacterClass characterClass, int level)
+        {
+            BuildLookup();
+            return statLookupTable[characterClass][level - 1].experienceRequired;
+        }
+
+
         public int GetLevelCount(CharacterClass characterClass)
         {
             BuildLookup();
@@ -61,7 +68,7 @@ namespace RPG.Stats
             public float health;
             public float attackDamage;
             public float experienceReward;
-            public float experienceToLevelUp;
+            public float experienceRequired;
         }
     }
 }
