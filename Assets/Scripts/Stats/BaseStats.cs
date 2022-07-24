@@ -9,14 +9,6 @@ namespace RPG.Stats
         [SerializeField] CharacterClass characterClass;
         [SerializeField] Progression progression = null;
 
-        private void Update()
-        {
-            if (gameObject.CompareTag("Player"))
-            {
-                print($"XP: {GetComponent<Experience>().GetCurrentExperience()}  Player Level: {GetCurrentLevel()}");
-            }
-        }
-
         public float GetHealth()
         {
             return progression.GetHealth(characterClass, currentLevel);
