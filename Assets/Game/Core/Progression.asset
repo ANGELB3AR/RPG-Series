@@ -17,19 +17,19 @@ MonoBehaviour:
     levels:
     - health: 50
       attackDamage: 5
-      experienceReward: 0
+      experienceReward: 40
     - health: 75
       attackDamage: 8
-      experienceReward: 0
+      experienceReward: 60
     - health: 100
       attackDamage: 10
-      experienceReward: 0
+      experienceReward: 75
     - health: 120
       attackDamage: 15
-      experienceReward: 0
+      experienceReward: 100
     - health: 150
       attackDamage: 20
-      experienceReward: 0
+      experienceReward: 130
   - characterClass: 1
     levels:
     - health: 10
