@@ -35,6 +35,10 @@ MonoBehaviour:
       attackDamage: 20
       experienceReward: 0
       experienceRequired: 40
+    - health: 175
+      attackDamage: 25
+      experienceReward: 0
+      experienceRequired: 50
   - characterClass: 1
     levels:
     - health: 10

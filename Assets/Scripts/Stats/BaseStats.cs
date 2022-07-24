@@ -31,19 +31,19 @@ namespace RPG.Stats
         {
             float currentXP = GetComponent<Experience>().GetCurrentExperience();
             int maxLevel = progression.GetLevelCount(CharacterClass.Player);
-            for (int level = 1; level < maxLevel; level++)
+            for (int level = 1; level < maxLevel + 1; level++)
             {
                 float XPRequired = progression.GetExperienceRequired(CharacterClass.Player, level);
-                if (XPRequired > currentXP)
-                {
-                    return level - 1;
-                }
-                else if (XPRequired == currentXP)
+                if (XPRequired == currentXP)
                 {
                     return level;
                 }
+                else if (XPRequired > currentXP)
+                {
+                    return level - 1;
+                }
             }
-            return 0;
+            return maxLevel;
         }
     }
 }
