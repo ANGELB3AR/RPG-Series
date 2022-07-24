@@ -49,5 +49,10 @@ namespace RPG.SceneManagement
         {
             savingSystem.Save(defaultSaveFile);
         }
+
+        public void Delete()
+        {
+            savingSystem.Delete(defaultSaveFile);
+        }
     }
 }
