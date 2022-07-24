@@ -18,5 +18,10 @@ namespace RPG.Stats
         {
             return progression.GetExperienceReward(characterClass, currentLevel);
         }
+
+        public int GetCurrentLevel()
+        {
+            GetComponent<Experience>();
+        }
     }
 }

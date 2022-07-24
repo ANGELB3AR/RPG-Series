@@ -10,7 +10,7 @@ namespace RPG.Stats
         [SerializeField] ProgressionCharacterClass[] characterClasses = null;
 
         Dictionary<CharacterClass, CharacterLevel[]> statLookupTable = null;
-
+ 
         void BuildLookup()
         {
             if (statLookupTable != null) { return; }
