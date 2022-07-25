@@ -8,6 +8,7 @@ namespace RPG.Attributes
 {
     public class Health : MonoBehaviour, ISaveable
     {
+        [Tooltip("How much player heals on level up events")]
         [SerializeField] float regenerationPercentage = 70;
 
         float healthPoints = -1f;
@@ -38,6 +39,8 @@ namespace RPG.Attributes
 
         public void TakeDamage(GameObject instigator, float damage)
         {
+            print($"{gameObject.name} took damage: {damage}");
+
             healthPoints = Mathf.Max(healthPoints - damage, 0);
 
             if (healthPoints == 0 && !isDead)
@@ -62,6 +65,16 @@ namespace RPG.Attributes
             GetComponent<Animator>().SetTrigger(deathAnimParam);
             GetComponent<ActionScheduler>().CancelCurrentAction();
             isDead = true;
+        }
+
+        public float GetHealthPoints()
+        {
+            return healthPoints;
+        }
+
+        public float GetMaxHealthPoints()
+        {
+            return baseStats.GetHealth();
         }
 
         public float GetPercentage()
