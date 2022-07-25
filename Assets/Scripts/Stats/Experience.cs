@@ -10,7 +10,6 @@ namespace RPG.Stats
     {
         float experiencePoints = 0;
 
-        //public delegate void ExperienceGainedDelegate();
         public event Action onExperienceGained;
 
         public void GainExperience(float XP)
