@@ -20,10 +20,17 @@ namespace RPG.Attributes
 
         void Start()
         {
+            baseStats.onLevelUp += FullHeal;
+
             if (healthPoints < 0)
             {
                 healthPoints = baseStats.GetHealth();
             }
+        }
+
+        public void FullHeal()
+        {
+            healthPoints = baseStats.GetHealth();
         }
 
         public void TakeDamage(GameObject instigator, float damage)

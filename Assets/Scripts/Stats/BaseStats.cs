@@ -13,6 +13,8 @@ namespace RPG.Stats
 
         Experience experience;
 
+        public event Action onLevelUp;
+
         void Awake()
         {
             experience = GetComponent<Experience>();
@@ -33,6 +35,7 @@ namespace RPG.Stats
             if (newLevel > currentLevel)
             {
                 currentLevel = newLevel;
+                onLevelUp();
                 LevelUpEffect();
             }
         }
