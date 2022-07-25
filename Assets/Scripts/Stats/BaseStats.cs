@@ -47,7 +47,7 @@ namespace RPG.Stats
 
         public float GetAttackDamage()
         {
-            return progression.GetAttackDamage(characterClass, currentLevel) + GetAdditiveDamageModifier();
+            return progression.GetAttackDamage(characterClass, currentLevel);
         }
 
         public float GetExperienceReward()
