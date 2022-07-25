@@ -1,9 +1,10 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace RPG.Stats
 {
-    public class BaseStats : MonoBehaviour
+    public class BaseStats : MonoBehaviour, IModifierProvider
     {
         [Range(1,99)]
         [SerializeField] int currentLevel = 0;
@@ -83,14 +84,22 @@ namespace RPG.Stats
             return maxLevel;
         }
 
-        float GetAdditiveModifier()
-        {
-            throw new NotImplementedException();
-        }
-
         void LevelUpEffect()
         {
             Instantiate(levelUpParticleEffect, transform);
+        }
+
+        public IEnumerable<float> GetAdditiveDamageModifier()
+        {
+            float total = 0;
+            foreach (IModifierProvider provider in GetComponents<IModifierProvider>())
+            {
+                foreach (float modifier in provider.GetAdditiveDamageModifier())
+                {
+                    total += modifier;
+                }
+            }
+            return total;
         }
     }
 }
