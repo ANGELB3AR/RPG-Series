@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace RPG.Stats
 {
-    public class BaseStats : MonoBehaviour, IModifierProvider
+    public class BaseStats : MonoBehaviour
     {
         [Range(1,99)]
         [SerializeField] int currentLevel = 0;
@@ -48,7 +48,7 @@ namespace RPG.Stats
 
         public float GetAttackDamage()
         {
-            return progression.GetAttackDamage(characterClass, currentLevel) + GetAdditiveDamageModifier();
+            return progression.GetAttackDamage(characterClass, currentLevel);
         }
 
         public float GetExperienceReward()
@@ -87,19 +87,6 @@ namespace RPG.Stats
         void LevelUpEffect()
         {
             Instantiate(levelUpParticleEffect, transform);
-        }
-
-        public IEnumerable<float> GetAdditiveDamageModifier()
-        {
-            float total = 0;
-            foreach (IModifierProvider provider in GetComponents<IModifierProvider>())
-            {
-                foreach (float modifier in provider.GetAdditiveDamageModifier())
-                {
-                    total += modifier;
-                }
-            }
-            return total;
         }
     }
 }
