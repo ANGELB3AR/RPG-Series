@@ -18,10 +18,9 @@ namespace RPG.Stats
 
         private void Start()
         {
-            currentLevel = CalculateCurrentLevel();
-
             if (experience != null)
             {
+                currentLevel = CalculateCurrentLevel();
                 experience.onExperienceGained += UpdateLevel;
             }
         }
@@ -53,7 +52,7 @@ namespace RPG.Stats
 
         public int CalculateCurrentLevel()
         {
-            float currentXP = GetComponent<Experience>().GetCurrentExperience();
+            float currentXP = experience.GetCurrentExperience();
             int maxLevel = progression.GetLevelCount(CharacterClass.Player);
             for (int level = 1; level < maxLevel + 1; level++)
             {
