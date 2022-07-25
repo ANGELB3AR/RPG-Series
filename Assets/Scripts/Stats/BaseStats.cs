@@ -42,12 +42,12 @@ namespace RPG.Stats
 
         public float GetHealth()
         {
-            return progression.GetHealth(characterClass, currentLevel);
+            return progression.GetStat(characterClass, currentLevel, Progression.StatValue.Stat.Health);
         }
 
         public float GetAttackDamage()
         {
-            return progression.GetAttackDamage(characterClass, currentLevel);
+            return progression.GetStat(characterClass, currentLevel, Progression.StatValue.Stat.AttackDamage);
         }
 
         public float GetExperienceReward()
