@@ -40,20 +40,25 @@ namespace RPG.Stats
             }
         }
 
-        public float GetHealth()
+        public float GetStat(Stat stat)
         {
-            return progression.GetStat(characterClass, currentLevel, Progression.StatValue.Stat.Health);
+            return progression.GetStat(characterClass, currentLevel, stat);
         }
 
-        public float GetAttackDamage()
-        {
-            return progression.GetStat(characterClass, currentLevel, Progression.StatValue.Stat.AttackDamage);
-        }
+        //public float GetHealth()
+        //{
+        //    return progression.GetStat(characterClass, currentLevel, Stat.Health);
+        //}
 
-        public float GetExperienceReward()
-        {
-            return progression.GetExperienceReward(characterClass, currentLevel);
-        }
+        //public float GetAttackDamage()
+        //{
+        //    return progression.GetStat(characterClass, currentLevel, Stat.AttackDamage);
+        //}
+
+        //public float GetExperienceReward()
+        //{
+        //    return progression.GetStat(characterClass, currentLevel, Stat.ExperienceReward);
+        //}
 
         public int GetCurrentLevel()
         {
@@ -70,7 +75,7 @@ namespace RPG.Stats
             int maxLevel = progression.GetLevelCount(CharacterClass.Player);
             for (int level = 1; level < maxLevel + 1; level++)
             {
-                float XPRequired = progression.GetExperienceRequired(CharacterClass.Player, level);
+                float XPRequired = progression.GetStat(CharacterClass.Player, currentLevel, Stat.ExperienceRequired);
                 if (XPRequired > currentXP)
                 {
                     return level - 1;
