@@ -46,23 +46,23 @@ namespace RPG.Stats
         [System.Serializable]
         public class CharacterLevel
         {
-            public Stat health;
-            public Stat attackDamage;
-            public Stat experienceReward;
-            public Stat experienceRequired;
+            public float health;
+            public float attackDamage;
+            public float experienceReward;
+            public float experienceRequired;
 
             public float GetStatValue(Stat stat)
             {
                 switch (stat)
                 {
                     case Stat.Health:
-                        return (float)Stat.Health;
+                        return health;
                     case Stat.AttackDamage:
-                        return (float)Stat.AttackDamage;
+                        return attackDamage;
                     case Stat.ExperienceReward:
-                        return (float)Stat.ExperienceReward;
+                        return experienceReward;
                     case Stat.ExperienceRequired:
-                        return (float)Stat.ExperienceRequired;
+                        return experienceRequired;
                     default:
                         return -1;
                 }
