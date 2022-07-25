@@ -24,6 +24,12 @@ namespace RPG.Stats
             }
         }
 
+        public float GetStat(CharacterClass characterClass, int level, Stat stat)
+        {
+            BuildLookup();
+            return statLookupTable[characterClass][level].stat;
+        }
+
         public float GetHealth(CharacterClass characterClass, int level)
         {
             BuildLookup();
@@ -56,21 +62,31 @@ namespace RPG.Stats
         }
 
         [System.Serializable]
-        class ProgressionCharacterClass
+        public class ProgressionCharacterClass
         {
             public CharacterClass characterClass;
             public CharacterLevel[] levels;
         }
 
         [System.Serializable]
-        class CharacterLevel
+        public class CharacterLevel
         {
-            public float health;
-            public float attackDamage;
-            public float experienceReward;
-            public float experienceRequired;
+            public Stat health;
+            public Stat attackDamage;
+            public Stat experienceReward;
+            public Stat experienceRequired;
+
+            [System.Serializable]
+            public class Stat
+            {
+                float baseValue;
+
+                public float GetValue()
+                {
+                    return baseValue;
+                }
+            }
         }
-    }
 }
 /*  TODO:
  *      - FIGURE OUT HOW TO CONVERT FLOAT STATS TO STAT STATS & CONSOLIDATE STAT LOOKUPS TO A SINGLE METHOD
