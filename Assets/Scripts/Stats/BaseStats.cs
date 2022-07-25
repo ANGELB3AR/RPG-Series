@@ -45,21 +45,6 @@ namespace RPG.Stats
             return progression.GetStat(characterClass, currentLevel, stat);
         }
 
-        //public float GetHealth()
-        //{
-        //    return progression.GetStat(characterClass, currentLevel, Stat.Health);
-        //}
-
-        //public float GetAttackDamage()
-        //{
-        //    return progression.GetStat(characterClass, currentLevel, Stat.AttackDamage);
-        //}
-
-        //public float GetExperienceReward()
-        //{
-        //    return progression.GetStat(characterClass, currentLevel, Stat.ExperienceReward);
-        //}
-
         public int GetCurrentLevel()
         {
             if (currentLevel < 1)
