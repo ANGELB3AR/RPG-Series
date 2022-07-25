@@ -54,7 +54,7 @@ namespace RPG.Attributes
             else
             {
                 //enemyHealthText.text = $"Enemy: {enemyHealth.GetPercentage().ToString()}%";
-                enemyHealthText.text = string.Format("{0:0}/{0:1}", enemyHealth.GetHealthPoints(), enemyHealth.GetMaxHealthPoints());
+                enemyHealthText.text = string.Format("{0:0}/{1:0}", enemyHealth.GetHealthPoints(), enemyHealth.GetMaxHealthPoints());
             }
         }
 
