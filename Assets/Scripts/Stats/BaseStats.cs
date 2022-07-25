@@ -5,7 +5,7 @@ namespace RPG.Stats
     public class BaseStats : MonoBehaviour
     {
         [Range(1,99)]
-        [SerializeField] int currentLevel = 1;
+        [SerializeField] int currentLevel = 0;
         [SerializeField] CharacterClass characterClass;
         [SerializeField] Progression progression = null;
 
@@ -47,6 +47,10 @@ namespace RPG.Stats
 
         public int GetCurrentLevel()
         {
+            if (currentLevel < 1)
+            {
+                currentLevel = CalculateCurrentLevel();
+            }
             return currentLevel;
         }
 
