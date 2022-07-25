@@ -24,7 +24,7 @@ namespace RPG.Stats
             }
         }
 
-        public float GetStat(CharacterClass characterClass, int level, StatValue.Stat stat)
+        public float GetStat(CharacterClass characterClass, int level, Stat stat)
         {
             BuildLookup();
             return statLookupTable[characterClass][level].GetStatValue(stat);
@@ -71,42 +71,30 @@ namespace RPG.Stats
         [System.Serializable]
         public class CharacterLevel
         {
-            public StatValue health;
-            public StatValue attackDamage;
-            public StatValue experienceReward;
-            public StatValue experienceRequired;
+            public Stat health;
+            public Stat attackDamage;
+            public Stat experienceReward;
+            public Stat experienceRequired;
 
-            public float GetStatValue(StatValue.Stat stat)
+            public float GetStatValue(Stat stat)
             {
-                if (stat == StatValue.Stat.Health)
+                if (stat == Stat.Health)
                 {
-                    return (float)StatValue.Stat.Health;
+                    return (float)Stat.Health;
                 }
-                else if (stat == StatValue.Stat.AttackDamage)
+                else if (stat == Stat.AttackDamage)
                 {
-                    return (float)StatValue.Stat.AttackDamage;
+                    return (float)Stat.AttackDamage;
                 }
-                else if (stat == StatValue.Stat.ExperienceReward)
+                else if (stat == Stat.ExperienceReward)
                 {
-                    return (float)StatValue.Stat.ExperienceReward;
+                    return (float)Stat.ExperienceReward;
                 }
-                else if (stat == StatValue.Stat.ExperienceRequired)
+                else if (stat == Stat.ExperienceRequired)
                 {
-                    return (float)StatValue.Stat.ExperienceRequired;
+                    return (float)Stat.ExperienceRequired;
                 }
                 else return 0;
-            }
-        }
-
-        [System.Serializable]
-        public class StatValue
-        {
-            public enum Stat
-            {
-                Health,
-                AttackDamage,
-                ExperienceReward,
-                ExperienceRequired
             }
         }
     }
