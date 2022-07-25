@@ -40,11 +40,6 @@ namespace RPG.Stats
             }
         }
 
-        void LevelUpEffect()
-        {
-            Instantiate(levelUpParticleEffect, transform);
-        }
-
         public float GetHealth()
         {
             return progression.GetHealth(characterClass, currentLevel);
@@ -52,7 +47,7 @@ namespace RPG.Stats
 
         public float GetAttackDamage()
         {
-            return progression.GetAttackDamage(characterClass, currentLevel);
+            return progression.GetAttackDamage(characterClass, currentLevel) + GetAdditiveModifier();
         }
 
         public float GetExperienceReward()
@@ -69,7 +64,7 @@ namespace RPG.Stats
             return currentLevel;
         }
 
-        public int CalculateCurrentLevel()
+        int CalculateCurrentLevel()
         {
             float currentXP = experience.GetCurrentExperience();
             int maxLevel = progression.GetLevelCount(CharacterClass.Player);
@@ -86,6 +81,16 @@ namespace RPG.Stats
                 }
             }
             return maxLevel;
+        }
+
+        float GetAdditiveModifier()
+        {
+            throw new NotImplementedException();
+        }
+
+        void LevelUpEffect()
+        {
+            Instantiate(levelUpParticleEffect, transform);
         }
     }
 }
