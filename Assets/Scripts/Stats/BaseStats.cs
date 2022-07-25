@@ -35,8 +35,8 @@ namespace RPG.Stats
             if (newLevel > currentLevel)
             {
                 currentLevel = newLevel;
-                onLevelUp();
                 LevelUpEffect();
+                onLevelUp();
             }
         }
 

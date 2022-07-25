@@ -8,6 +8,8 @@ namespace RPG.Attributes
 {
     public class Health : MonoBehaviour, ISaveable
     {
+        [SerializeField] float regenerationPercentage = 70;
+
         float healthPoints = -1f;
         BaseStats baseStats;
         bool isDead = false;
@@ -20,7 +22,7 @@ namespace RPG.Attributes
 
         void Start()
         {
-            baseStats.onLevelUp += FullHeal;
+            baseStats.onLevelUp += RegenerateHealth;
 
             if (healthPoints < 0)
             {
@@ -28,9 +30,10 @@ namespace RPG.Attributes
             }
         }
 
-        public void FullHeal()
+        void RegenerateHealth()
         {
-            healthPoints = baseStats.GetHealth();
+            float regenHealthPoints = baseStats.GetHealth() * (regenerationPercentage / 100);
+            healthPoints = Mathf.Max(healthPoints, regenHealthPoints);
         }
 
         public void TakeDamage(GameObject instigator, float damage)
