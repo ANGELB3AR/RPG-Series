@@ -53,23 +53,19 @@ namespace RPG.Stats
 
             public float GetStatValue(Stat stat)
             {
-                if (stat == Stat.Health)
+                switch (stat)
                 {
-                    return (float)Stat.Health;
+                    case Stat.Health:
+                        return (float)Stat.Health;
+                    case Stat.AttackDamage:
+                        return (float)Stat.AttackDamage;
+                    case Stat.ExperienceReward:
+                        return (float)Stat.ExperienceReward;
+                    case Stat.ExperienceRequired:
+                        return (float)Stat.ExperienceRequired;
+                    default:
+                        return -1;
                 }
-                else if (stat == Stat.AttackDamage)
-                {
-                    return (float)Stat.AttackDamage;
-                }
-                else if (stat == Stat.ExperienceReward)
-                {
-                    return (float)Stat.ExperienceReward;
-                }
-                else if (stat == Stat.ExperienceRequired)
-                {
-                    return (float)Stat.ExperienceRequired;
-                }
-                else return 0;
             }
         }
     }
