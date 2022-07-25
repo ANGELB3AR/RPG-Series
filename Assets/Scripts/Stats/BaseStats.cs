@@ -9,12 +9,24 @@ namespace RPG.Stats
         [SerializeField] CharacterClass characterClass;
         [SerializeField] Progression progression = null;
 
+        Experience experience;
+
+        void Awake()
+        {
+            experience = GetComponent<Experience>();
+        }
+
         private void Start()
         {
             currentLevel = CalculateCurrentLevel();
+
+            if (experience != null)
+            {
+                experience.onExperienceGained += UpdateLevel;
+            }
         }
 
-        void Update()
+        void UpdateLevel()
         {
             int newLevel = CalculateCurrentLevel();
             if (newLevel > currentLevel)
