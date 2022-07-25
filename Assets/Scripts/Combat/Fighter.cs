@@ -126,7 +126,7 @@ namespace RPG.Combat
         {
             if (target == null) { return; }
 
-            float damage = baseStats.GetAttackDamage();
+            float damage = baseStats.GetStat(Stat.AttackDamage);
             if (currentWeapon.HasProjectile())
             {
                 currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, target, gameObject, damage);
