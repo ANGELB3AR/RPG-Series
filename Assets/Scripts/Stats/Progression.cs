@@ -27,7 +27,7 @@ namespace RPG.Stats
         public float GetStat(CharacterClass characterClass, int level, Stat stat)
         {
             BuildLookup();
-            return statLookupTable[characterClass][level].GetStatValue(stat);
+            return statLookupTable[characterClass][level - 1].GetStatValue(stat);
         }
 
         public int GetLevelCount(CharacterClass characterClass)
