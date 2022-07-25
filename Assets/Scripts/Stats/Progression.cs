@@ -65,10 +65,10 @@ namespace RPG.Stats
         [System.Serializable]
         class CharacterLevel
         {
-            public Stat health;
-            public Stat attackDamage;
-            public Stat experienceReward;
-            public Stat experienceRequired;
+            public float health;
+            public float attackDamage;
+            public float experienceReward;
+            public float experienceRequired;
         }
     }
 }
