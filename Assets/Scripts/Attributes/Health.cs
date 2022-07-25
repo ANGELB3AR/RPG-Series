@@ -27,13 +27,13 @@ namespace RPG.Attributes
 
             if (healthPoints < 0)
             {
-                healthPoints = baseStats.GetHealth();
+                healthPoints = baseStats.GetStat(Stat.Health);
             }
         }
 
         void RegenerateHealth()
         {
-            float regenHealthPoints = baseStats.GetHealth() * (regenerationPercentage / 100);
+            float regenHealthPoints = baseStats.GetStat(Stat.Health) * (regenerationPercentage / 100);
             healthPoints = Mathf.Max(healthPoints, regenHealthPoints);
         }
 
@@ -55,7 +55,7 @@ namespace RPG.Attributes
             Experience experience = instigator.GetComponent<Experience>();
             if (experience == null) { return; }
 
-            experience.GainExperience(baseStats.GetExperienceReward());
+            experience.GainExperience(baseStats.GetStat(Stat.ExperienceReward));
         }
 
         void Die()
@@ -74,12 +74,12 @@ namespace RPG.Attributes
 
         public float GetMaxHealthPoints()
         {
-            return baseStats.GetHealth();
+            return baseStats.GetStat(Stat.Health);
         }
 
         public float GetPercentage()
         {
-            return Mathf.Round(100 * healthPoints / baseStats.GetHealth());
+            return Mathf.Round(100 * healthPoints / baseStats.GetStat(Stat.Health));
         }
 
         public bool IsDead()
