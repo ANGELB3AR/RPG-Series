@@ -116,8 +116,6 @@ namespace RPG.Combat
             animator.SetTrigger(stopAttackAnimParam);
         }
 
-<<<<<<< HEAD
-=======
         public IEnumerable<float> GetAdditiveModifiers(Stat stat)
         {
             if (stat == Stat.AttackDamage)
@@ -134,7 +132,6 @@ namespace RPG.Combat
             }
         }
 
->>>>>>> Stat-Modifiers
         // Called from Animation Event
         void Hit()
         {

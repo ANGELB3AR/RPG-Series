@@ -49,11 +49,7 @@ namespace RPG.Stats
 
         float GetBaseStat(Stat stat)
         {
-<<<<<<< HEAD
-            return progression.GetAttackDamage(characterClass, currentLevel);
-=======
             return progression.GetStat(characterClass, currentLevel, stat);
->>>>>>> Stat-Modifiers
         }
 
         float GetAdditiveModifiers(Stat stat)
@@ -68,6 +64,7 @@ namespace RPG.Stats
                     total += modifier;
                 }
             }
+            print($"Additive Modifiers: {total}");
             return total;
         }
 
@@ -83,6 +80,7 @@ namespace RPG.Stats
                     total += modifier;
                 }
             }
+            print($"Percentage Modifiers: {total}");
             return total;
         }
 
