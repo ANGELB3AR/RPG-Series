@@ -39,7 +39,7 @@ namespace RPG.Attributes
 
         public void TakeDamage(GameObject instigator, float damage)
         {
-            print($"{gameObject.name} took damage: {damage}");
+            print($"{gameObject.name} took damage: {damage} from {instigator.name}");
 
             healthPoints = Mathf.Max(healthPoints - damage, 0);
 
