@@ -2926,7 +2926,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2278724821401945711, guid: 3439dfe9a7ffb6944bb8bb48eb3c1c18, type: 3}
       propertyPath: regenerationPercentage
-      value: 70
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3210195317656150837, guid: 3439dfe9a7ffb6944bb8bb48eb3c1c18, type: 3}
       propertyPath: currentLevel

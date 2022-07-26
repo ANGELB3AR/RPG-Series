@@ -31,6 +31,7 @@ namespace RPG.Attributes
             }
         }
 
+        // BUG: If Player is full health and levels up their health will not be 100%
         void RegenerateHealth()
         {
             float regenHealthPoints = baseStats.GetStat(Stat.Health) * (regenerationPercentage / 100);
