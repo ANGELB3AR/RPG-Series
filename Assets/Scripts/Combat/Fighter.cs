@@ -116,9 +116,12 @@ namespace RPG.Combat
             animator.SetTrigger(stopAttackAnimParam);
         }
 
-        public IEnumerable<float> GetAdditiveModifier()
+        public IEnumerable<float> GetAdditiveModifier(Stat stat)
         {
-            yield return currentWeapon.GetDamage();
+            if (stat == Stat.AttackDamage)
+            {
+                yield return currentWeapon.GetDamage();
+            }
         }
 
         // Called from Animation Event
