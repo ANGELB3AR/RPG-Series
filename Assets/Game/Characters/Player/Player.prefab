@@ -12,9 +12,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8455638681311853454, guid: 05009980673c7ec44aa6a4700c9c1efc, type: 3}
+      propertyPath: shouldUseModifiers
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8455638681311853454, guid: 05009980673c7ec44aa6a4700c9c1efc, type: 3}
       propertyPath: levelUpParticleEffect
       value: 
       objectReference: {fileID: 5533266012348586378, guid: e8bb312e15e5e0b438923b8eac104726, type: 3}
+    - target: {fileID: -5065204948344905432, guid: 05009980673c7ec44aa6a4700c9c1efc, type: 3}
+      propertyPath: regenerationPercentage
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: -3572146243412182051, guid: 05009980673c7ec44aa6a4700c9c1efc, type: 3}
       propertyPath: uniqueIdentifier
       value: player

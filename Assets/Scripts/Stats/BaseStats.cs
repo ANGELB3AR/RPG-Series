@@ -11,6 +11,7 @@ namespace RPG.Stats
         [SerializeField] CharacterClass characterClass;
         [SerializeField] Progression progression = null;
         [SerializeField] GameObject levelUpParticleEffect = null;
+        [SerializeField] bool shouldUseModifiers = false;
 
         Experience experience;
 
@@ -53,6 +54,8 @@ namespace RPG.Stats
 
         float GetAdditiveModifier(Stat stat)
         {
+            if (!shouldUseModifiers) { return 0; }
+
             float total = 0;
             foreach (IModifierProvider provider in GetComponents<IModifierProvider>())
             {
@@ -66,6 +69,8 @@ namespace RPG.Stats
 
         float GetPercentageModifier(Stat stat)
         {
+            if (!shouldUseModifiers) { return 0; }
+
             float total = 0;
             foreach (IModifierProvider provider in GetComponents<IModifierProvider>())
             {
