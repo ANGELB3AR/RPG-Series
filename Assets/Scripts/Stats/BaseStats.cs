@@ -75,11 +75,6 @@ namespace RPG.Stats
             return maxLevel;
         }
 
-        float GetAdditiveModifier()
-        {
-            throw new NotImplementedException();
-        }
-
         void LevelUpEffect()
         {
             Instantiate(levelUpParticleEffect, transform);
