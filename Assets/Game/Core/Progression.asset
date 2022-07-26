@@ -20,14 +20,14 @@ MonoBehaviour:
       experienceReward: 0
       experienceRequired: 0
     - health: 75
-      attackDamage: 8
+      attackDamage: 7
       experienceReward: 0
       experienceRequired: 10
     - health: 100
       attackDamage: 10
       experienceReward: 0
       experienceRequired: 20
-    - health: 120
+    - health: 125
       attackDamage: 15
       experienceReward: 0
       experienceRequired: 30
@@ -41,67 +41,67 @@ MonoBehaviour:
       experienceRequired: 50
   - characterClass: 1
     levels:
-    - health: 10
-      attackDamage: 3
+    - health: 5
+      attackDamage: 5
       experienceReward: 5
       experienceRequired: 0
-    - health: 15
-      attackDamage: 5
-      experienceReward: 7
-      experienceRequired: 0
-    - health: 20
-      attackDamage: 8
-      experienceReward: 10
-      experienceRequired: 0
-    - health: 25
-      attackDamage: 10
-      experienceReward: 12
-      experienceRequired: 0
-    - health: 30
-      attackDamage: 15
-      experienceReward: 15
-      experienceRequired: 0
-  - characterClass: 2
-    levels:
     - health: 10
       attackDamage: 10
       experienceReward: 10
       experienceRequired: 0
-    - health: 10
-      attackDamage: 12
-      experienceReward: 12
-      experienceRequired: 0
     - health: 15
       attackDamage: 15
       experienceReward: 15
-      experienceRequired: 0
-    - health: 15
-      attackDamage: 17
-      experienceReward: 17
       experienceRequired: 0
     - health: 20
       attackDamage: 20
       experienceReward: 20
       experienceRequired: 0
-  - characterClass: 3
+    - health: 25
+      attackDamage: 25
+      experienceReward: 25
+      experienceRequired: 0
+  - characterClass: 2
     levels:
-    - health: 10
+    - health: 5
       attackDamage: 5
-      experienceReward: 7
+      experienceReward: 5
       experienceRequired: 0
     - health: 10
-      attackDamage: 8
+      attackDamage: 10
       experienceReward: 10
       experienceRequired: 0
     - health: 15
-      attackDamage: 10
-      experienceReward: 12
-      experienceRequired: 0
-    - health: 15
-      attackDamage: 13
+      attackDamage: 15
       experienceReward: 15
       experienceRequired: 0
     - health: 20
-      attackDamage: 15
+      attackDamage: 20
       experienceReward: 20
+      experienceRequired: 0
+    - health: 25
+      attackDamage: 25
+      experienceReward: 25
+      experienceRequired: 0
+  - characterClass: 3
+    levels:
+    - health: 5
+      attackDamage: 5
+      experienceReward: 5
+      experienceRequired: 0
+    - health: 10
+      attackDamage: 10
+      experienceReward: 10
+      experienceRequired: 0
+    - health: 15
+      attackDamage: 15
+      experienceReward: 15
+      experienceRequired: 0
+    - health: 20
+      attackDamage: 20
+      experienceReward: 20
+      experienceRequired: 0
+    - health: 25
+      attackDamage: 25
+      experienceReward: 25
       experienceRequired: 0

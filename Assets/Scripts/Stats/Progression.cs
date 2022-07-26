@@ -10,7 +10,7 @@ namespace RPG.Stats
         [SerializeField] ProgressionCharacterClass[] characterClasses = null;
 
         Dictionary<CharacterClass, CharacterLevel[]> statLookupTable = null;
- 
+
         void BuildLookup()
         {
             if (statLookupTable != null) { return; }
@@ -24,30 +24,11 @@ namespace RPG.Stats
             }
         }
 
-        public float GetHealth(CharacterClass characterClass, int level)
+        public float GetStat(CharacterClass characterClass, int level, Stat stat)
         {
             BuildLookup();
-            return statLookupTable[characterClass][level - 1].health;
+            return statLookupTable[characterClass][level - 1].GetStatValue(stat);
         }
-
-        public float GetAttackDamage(CharacterClass characterClass, int level)
-        {
-            BuildLookup();
-            return statLookupTable[characterClass][level - 1].attackDamage;
-        }
-
-        public float GetExperienceReward(CharacterClass characterClass, int level)
-        {
-            BuildLookup();
-            return statLookupTable[characterClass][level - 1].experienceReward;
-        }
-
-        public float GetExperienceRequired(CharacterClass characterClass, int level)
-        {
-            BuildLookup();
-            return statLookupTable[characterClass][level - 1].experienceRequired;
-        }
-
 
         public int GetLevelCount(CharacterClass characterClass)
         {
@@ -56,19 +37,36 @@ namespace RPG.Stats
         }
 
         [System.Serializable]
-        class ProgressionCharacterClass
+        public class ProgressionCharacterClass
         {
             public CharacterClass characterClass;
             public CharacterLevel[] levels;
         }
 
         [System.Serializable]
-        class CharacterLevel
+        public class CharacterLevel
         {
             public float health;
             public float attackDamage;
             public float experienceReward;
             public float experienceRequired;
+
+            public float GetStatValue(Stat stat)
+            {
+                switch (stat)
+                {
+                    case Stat.Health:
+                        return health;
+                    case Stat.AttackDamage:
+                        return attackDamage;
+                    case Stat.ExperienceReward:
+                        return experienceReward;
+                    case Stat.ExperienceRequired:
+                        return experienceRequired;
+                    default:
+                        return -1;
+                }
+            }
         }
     }
 }

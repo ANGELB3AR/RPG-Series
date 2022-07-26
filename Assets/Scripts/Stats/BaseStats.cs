@@ -11,6 +11,7 @@ namespace RPG.Stats
         [SerializeField] CharacterClass characterClass;
         [SerializeField] Progression progression = null;
         [SerializeField] GameObject levelUpParticleEffect = null;
+        [SerializeField] bool shouldUseModifiers = false;
 
         Experience experience;
 
@@ -41,19 +42,48 @@ namespace RPG.Stats
             }
         }
 
-        public float GetHealth()
+        public float GetStat(Stat stat)
         {
-            return progression.GetHealth(characterClass, currentLevel);
+            return GetBaseStat(stat) + GetAdditiveModifiers(stat) * (1 + GetPercentageModifiers(stat) / 100);
         }
 
-        public float GetAttackDamage()
+        float GetBaseStat(Stat stat)
         {
+<<<<<<< HEAD
             return progression.GetAttackDamage(characterClass, currentLevel);
+=======
+            return progression.GetStat(characterClass, currentLevel, stat);
+>>>>>>> Stat-Modifiers
         }
 
-        public float GetExperienceReward()
+        float GetAdditiveModifiers(Stat stat)
         {
-            return progression.GetExperienceReward(characterClass, currentLevel);
+            if (!shouldUseModifiers) { return 0; }
+
+            float total = 0;
+            foreach (IModifierProvider provider in GetComponents<IModifierProvider>())
+            {
+                foreach (float modifier in provider.GetAdditiveModifiers(stat))
+                {
+                    total += modifier;
+                }
+            }
+            return total;
+        }
+
+        float GetPercentageModifiers(Stat stat)
+        {
+            if (!shouldUseModifiers) { return 0; }
+
+            float total = 0;
+            foreach (IModifierProvider provider in GetComponents<IModifierProvider>())
+            {
+                foreach (float modifier in provider.GetPercentageModifiers(stat))
+                {
+                    total += modifier;
+                }
+            }
+            return total;
         }
 
         public int GetCurrentLevel()
@@ -68,10 +98,12 @@ namespace RPG.Stats
         int CalculateCurrentLevel()
         {
             float currentXP = experience.GetCurrentExperience();
-            int maxLevel = progression.GetLevelCount(CharacterClass.Player);
+            int maxLevel = progression.GetLevelCount(characterClass);
+
             for (int level = 1; level < maxLevel + 1; level++)
             {
-                float XPRequired = progression.GetExperienceRequired(CharacterClass.Player, level);
+                float XPRequired = progression.GetStat(characterClass, level, Stat.ExperienceRequired);
+
                 if (XPRequired > currentXP)
                 {
                     return level - 1;

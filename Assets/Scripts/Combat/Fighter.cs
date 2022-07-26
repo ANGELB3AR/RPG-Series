@@ -116,12 +116,31 @@ namespace RPG.Combat
             animator.SetTrigger(stopAttackAnimParam);
         }
 
+<<<<<<< HEAD
+=======
+        public IEnumerable<float> GetAdditiveModifiers(Stat stat)
+        {
+            if (stat == Stat.AttackDamage)
+            {
+                yield return currentWeapon.GetDamage();
+            }
+        }
+
+        public IEnumerable<float> GetPercentageModifiers(Stat stat)
+        {
+            if (stat == Stat.AttackDamage)
+            {
+                yield return currentWeapon.GetPercentageBonus();
+            }
+        }
+
+>>>>>>> Stat-Modifiers
         // Called from Animation Event
         void Hit()
         {
             if (target == null) { return; }
 
-            float damage = baseStats.GetAttackDamage();
+            float damage = baseStats.GetStat(Stat.AttackDamage);
             if (currentWeapon.HasProjectile())
             {
                 currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, target, gameObject, damage);
