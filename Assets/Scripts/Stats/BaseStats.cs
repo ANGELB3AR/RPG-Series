@@ -44,7 +44,7 @@ namespace RPG.Stats
 
         public float GetStat(Stat stat)
         {
-            return GetBaseStat(stat) + GetAdditiveModifier(stat) * (1 + GetPercentageModifier(stat) / 100);
+            return GetBaseStat(stat) + GetAdditiveModifiers(stat) * (1 + GetPercentageModifiers(stat) / 100);
         }
 
         float GetBaseStat(Stat stat)
@@ -52,7 +52,7 @@ namespace RPG.Stats
             return progression.GetStat(characterClass, currentLevel, stat);
         }
 
-        float GetAdditiveModifier(Stat stat)
+        float GetAdditiveModifiers(Stat stat)
         {
             if (!shouldUseModifiers) { return 0; }
 
@@ -67,7 +67,7 @@ namespace RPG.Stats
             return total;
         }
 
-        float GetPercentageModifier(Stat stat)
+        float GetPercentageModifiers(Stat stat)
         {
             if (!shouldUseModifiers) { return 0; }
 
