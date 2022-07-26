@@ -57,10 +57,10 @@ namespace RPG.Stats
         int CalculateCurrentLevel()
         {
             float currentXP = experience.GetCurrentExperience();
-            int maxLevel = progression.GetLevelCount(CharacterClass.Player);
+            int maxLevel = progression.GetLevelCount(characterClass);
             for (int level = 1; level < maxLevel + 1; level++)
             {
-                float XPRequired = progression.GetStat(CharacterClass.Player, currentLevel, Stat.ExperienceRequired);
+                float XPRequired = progression.GetStat(characterClass, currentLevel, Stat.ExperienceRequired);
                 if (XPRequired > currentXP)
                 {
                     return level - 1;
