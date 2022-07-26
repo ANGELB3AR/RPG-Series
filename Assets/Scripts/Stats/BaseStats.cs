@@ -64,7 +64,6 @@ namespace RPG.Stats
                     total += modifier;
                 }
             }
-            print($"Additive Modifiers: {total}");
             return total;
         }
 
@@ -80,7 +79,6 @@ namespace RPG.Stats
                     total += modifier;
                 }
             }
-            print($"Percentage Modifiers: {total}");
             return total;
         }
 
