@@ -22,13 +22,22 @@ namespace RPG.Stats
             experience = GetComponent<Experience>();
         }
 
-        private void Start()
+        void Start()
+        {
+            currentLevel = CalculateCurrentLevel();
+        }
+
+        void OnEnable()
         {
             if (experience != null)
             {
-                currentLevel = CalculateCurrentLevel();
                 experience.onExperienceGained += UpdateLevel;
             }
+        }
+
+        void OnDisable()
+        {
+            experience.onExperienceGained -= UpdateLevel;
         }
 
         void UpdateLevel()

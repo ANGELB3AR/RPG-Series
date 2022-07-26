@@ -24,8 +24,8 @@ namespace RPG.SceneManagement
 
         IEnumerator LoadLastScene()
         {
-            fader.FadeOutImmediate();
             yield return savingSystem.LoadLastScene(defaultSaveFile);
+            fader.FadeOutImmediate();
             yield return fader.FadeIn(fadeInTime);
         }
 
