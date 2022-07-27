@@ -1,13 +1,14 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using GameDevTV.Utils;
 
 namespace RPG.Stats
 {
     public class BaseStats : MonoBehaviour
     {
         [Range(1,99)]
-        [SerializeField] int currentLevel = 0;
+        [SerializeField] LazyValue<int> currentLevel;
         [SerializeField] CharacterClass characterClass;
         [SerializeField] Progression progression = null;
         [SerializeField] GameObject levelUpParticleEffect = null;
@@ -20,11 +21,13 @@ namespace RPG.Stats
         void Awake()
         {
             experience = GetComponent<Experience>();
+
+            currentLevel = new LazyValue<int>(CalculateCurrentLevel);
         }
 
         void Start()
         {
-            currentLevel = CalculateCurrentLevel();
+            currentLevel.ForceInit();
         }
 
         void OnEnable()
@@ -43,9 +46,9 @@ namespace RPG.Stats
         void UpdateLevel()
         {
             int newLevel = CalculateCurrentLevel();
-            if (newLevel > currentLevel)
+            if (newLevel > currentLevel.value)
             {
-                currentLevel = newLevel;
+                currentLevel.value = newLevel;
                 LevelUpEffect();
                 onLevelUp();
             }
@@ -58,7 +61,7 @@ namespace RPG.Stats
 
         float GetBaseStat(Stat stat)
         {
-            return progression.GetStat(characterClass, currentLevel, stat);
+            return progression.GetStat(characterClass, currentLevel.value, stat);
         }
 
         float GetAdditiveModifiers(Stat stat)
@@ -93,11 +96,7 @@ namespace RPG.Stats
 
         public int GetCurrentLevel()
         {
-            if (currentLevel < 1)
-            {
-                currentLevel = CalculateCurrentLevel();
-            }
-            return currentLevel;
+            return currentLevel.value;
         }
 
         int CalculateCurrentLevel()
