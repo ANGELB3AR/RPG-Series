@@ -1188,6 +1188,10 @@ PrefabInstance:
       propertyPath: currentLevel
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 2360534961043212307, guid: 4eea182edd7e3f847968b326262232e1, type: 3}
+      propertyPath: characterClass
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2795027926136736052, guid: 4eea182edd7e3f847968b326262232e1, type: 3}
       propertyPath: weaponDamage
       value: 8

@@ -7,12 +7,13 @@ namespace RPG.Stats
 {
     public class BaseStats : MonoBehaviour
     {
-        [Range(1,99)]
-        [SerializeField] LazyValue<int> currentLevel;
+        [Range(1, 99)]
+        [SerializeField] int startingLevel = 1;
         [SerializeField] CharacterClass characterClass;
         [SerializeField] Progression progression = null;
         [SerializeField] GameObject levelUpParticleEffect = null;
         [SerializeField] bool shouldUseModifiers = false;
+        LazyValue<int> currentLevel;
 
         Experience experience;
 
@@ -22,7 +23,16 @@ namespace RPG.Stats
         {
             experience = GetComponent<Experience>();
 
-            currentLevel = new LazyValue<int>(CalculateCurrentLevel);
+            currentLevel = new LazyValue<int>(GetInitialLevel);
+        }
+
+        int GetInitialLevel()
+        {
+            if (experience != null)
+            {
+                return CalculateCurrentLevel();
+            }
+            return startingLevel;
         }
 
         void Start()
