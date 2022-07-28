@@ -2,6 +2,7 @@ using UnityEngine;
 using RPG.Movement;
 using RPG.Combat;
 using RPG.Attributes;
+using System;
 
 namespace RPG.Control
 {
@@ -9,6 +10,20 @@ namespace RPG.Control
     {
         Mover mover;
         Health health;
+        enum CursorType
+        {
+            None,
+            Movement,
+            Combat
+        }
+
+        [System.Serializable]
+        struct CursorMapping
+        {
+            public CursorType type;
+        }
+
+        [SerializeField] CursorMapping[] cursorMappings = null;
 
         void Awake()
         {
@@ -21,7 +36,7 @@ namespace RPG.Control
             if (health.IsDead()) { return; }
             if (InteractWithCombat()) { return; }
             if (InteractWithMovement()) { return; }
-            print("Nothing to do");
+            SetCursor(CursorType.None);
         }
 
         bool InteractWithCombat()
@@ -39,6 +54,7 @@ namespace RPG.Control
                 {
                     GetComponent<Fighter>().Attack(target.gameObject);
                 }
+                SetCursor(CursorType.Combat);
                 return true;
             }
             return false;
@@ -55,9 +71,21 @@ namespace RPG.Control
                 {
                     mover.StartMoveAction(hit.point, 1f);
                 }
+                SetCursor(CursorType.Movement);
                 return true; 
             }
             return false;
+        }
+
+        private void SetCursor(CursorType type)
+        {
+            CursorMapping mapping = GetCursorMapping(type);
+            Cursor.SetCursor(mapping.texture, mapping.hotspot, CursorMode.Auto);
+        }
+
+        CursorMapping GetCursorMapping(CursorType type)
+        {
+
         }
 
         private static Ray GetMouseRay()
