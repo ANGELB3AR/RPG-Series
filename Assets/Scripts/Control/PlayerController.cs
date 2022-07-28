@@ -79,7 +79,7 @@ namespace RPG.Control
             return false;
         }
 
-        private void SetCursor(CursorType type)
+        void SetCursor(CursorType type)
         {
             CursorMapping mapping = GetCursorMapping(type);
             Cursor.SetCursor(mapping.texture, mapping.hotspot, CursorMode.Auto);
