@@ -21,6 +21,8 @@ namespace RPG.Control
         struct CursorMapping
         {
             public CursorType type;
+            public Texture2D texture;
+            public Vector2 hotspot;
         }
 
         [SerializeField] CursorMapping[] cursorMappings = null;
@@ -85,7 +87,14 @@ namespace RPG.Control
 
         CursorMapping GetCursorMapping(CursorType type)
         {
-
+            foreach (CursorMapping mapping in cursorMappings)
+            {
+                if (mapping.type == type)
+                {
+                    return mapping;
+                }
+            }
+            return cursorMappings[0];
         }
 
         private static Ray GetMouseRay()
