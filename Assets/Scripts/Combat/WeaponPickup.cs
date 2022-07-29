@@ -2,10 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using RPG.Control;
 
 namespace RPG.Combat
 {
-    public class WeaponPickup : MonoBehaviour
+    public class WeaponPickup : MonoBehaviour, IRaycastable
     {
         [SerializeField] Weapon weapon = null;
         [SerializeField] float respawnTime = 5f;
@@ -46,6 +47,14 @@ namespace RPG.Combat
             foreach (Transform child in transform)
             {
                 child.gameObject.SetActive(true);
+            }
+        }
+
+        public bool HandleRaycast()
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                Pickup();
             }
         }
     }
