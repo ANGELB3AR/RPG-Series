@@ -65,6 +65,8 @@ namespace RPG.Control
         {
             // Get all hits
             // Sort by distance
+                // Build array of distances
+                // Sort the hits
             // return
             return Physics.RaycastAll(GetMouseRay());
         }
