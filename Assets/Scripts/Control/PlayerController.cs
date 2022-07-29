@@ -44,10 +44,29 @@ namespace RPG.Control
                 return; 
             }
 
+            if (InteractWithComponent()) { return; }
             if (InteractWithCombat()) { return; }
             if (InteractWithMovement()) { return; }
 
             SetCursor(CursorType.None);
+        }
+
+        bool InteractWithComponent()
+        {
+            RaycastHit[] hits = Physics.RaycastAll(GetMouseRay());
+            foreach (RaycastHit hit in hits)
+            {
+                IRaycastable[] raycastables = hit.transform.GetComponents<IRaycastable>();
+                foreach (IRaycastable raycastable in raycastables)
+                {
+                    if (raycastable.HandleRaycast())
+                    {
+                        SetCursor(CursorType.Combat);
+                        return true;
+                    }
+                }
+            }
+            return false;
         }
 
         bool InteractWithUI()
