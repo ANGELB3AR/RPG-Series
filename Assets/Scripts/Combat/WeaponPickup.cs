@@ -50,12 +50,13 @@ namespace RPG.Combat
             }
         }
 
-        public bool HandleRaycast()
+        public bool HandleRaycast(PlayerController callingController)
         {
             if (Input.GetMouseButtonDown(0))
             {
-                Pickup();
+                Pickup(callingController.GetComponent<Fighter>());
             }
+            return true;
         }
     }
 }

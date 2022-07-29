@@ -59,7 +59,7 @@ namespace RPG.Control
                 IRaycastable[] raycastables = hit.transform.GetComponents<IRaycastable>();
                 foreach (IRaycastable raycastable in raycastables)
                 {
-                    if (raycastable.HandleRaycast())
+                    if (raycastable.HandleRaycast(this))
                     {
                         SetCursor(CursorType.Combat);
                         return true;
