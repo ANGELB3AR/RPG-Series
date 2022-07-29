@@ -6,6 +6,6 @@ namespace RPG.Control
 {
     public interface IRaycastable
     {
-        bool HandleRaycast();
+        bool HandleRaycast(PlayerController callingController);
     }
 }
