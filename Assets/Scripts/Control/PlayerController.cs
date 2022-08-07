@@ -104,6 +104,9 @@ namespace RPG.Control
 
         bool RaycastNavMesh(out Vector3 target)
         {
+            // Raycast to terrain
+            // Find nearest navmesh point
+            // Return true if found
             target = new Vector3();
             return true;
         }
