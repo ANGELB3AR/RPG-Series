@@ -12,7 +12,12 @@ namespace RPG.Attributes
     {
         [Tooltip("How much player heals on level up events")]
         [SerializeField] float regenerationPercentage = 70;
-        [SerializeField] UnityEvent takeDamage;
+        [SerializeField] TakeDamageEvent takeDamage;
+
+        [System.Serializable]
+        public class TakeDamageEvent : UnityEvent<float>
+        {
+        }
 
         LazyValue<float> healthPoints;
 
@@ -66,7 +71,7 @@ namespace RPG.Attributes
             }
             else
             {
-            takeDamage.Invoke();
+            takeDamage.Invoke(damage);
             }
         }
 
