@@ -17,7 +17,7 @@ namespace RPG.UI.DamageText
 
         public void SetValue(float amount)
         {
-            damageText.text = amount.ToString();
+            damageText.text = Mathf.Round(amount).ToString();
         }
     }
 }
