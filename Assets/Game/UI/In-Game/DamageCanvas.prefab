@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 5993132931952899310}
   - component: {fileID: 703147621307486969}
   - component: {fileID: 2724078129866943628}
+  - component: {fileID: 2341889530188018578}
+  - component: {fileID: 750662896168261053}
   m_Layer: 5
   m_Name: DamageCanvas
   m_TagString: Untagged
@@ -114,6 +116,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc027a4d3b1ae7146910ad5871e70140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &2341889530188018578
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2427507030002898863}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 042d576617a00274ba4e44e5c755e8fb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!225 &750662896168261053
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2427507030002898863}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &3797912196297331349
 GameObject:
   m_ObjectHideFlags: 0
