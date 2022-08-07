@@ -2,17 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraFacing : MonoBehaviour
+namespace RPG.Core
 {
-    // Start is called before the first frame update
-    void Start()
+    public class CameraFacing : MonoBehaviour
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        void Update()
+        {
+            transform.forward = Camera.main.transform.forward;
+        }
     }
 }
