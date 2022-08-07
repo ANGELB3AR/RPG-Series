@@ -85,8 +85,10 @@ namespace RPG.Control
 
         bool InteractWithMovement()
         {
-            RaycastHit hit;
-            bool hasHit = Physics.Raycast(GetMouseRay(), out hit);
+            //RaycastHit hit;
+            //bool hasHit = Physics.Raycast(GetMouseRay(), out hit);
+            Vector3 target;
+            bool hasHit = RaycastNavMesh(out target);
 
             if (hasHit)
             {
@@ -98,6 +100,12 @@ namespace RPG.Control
                 return true; 
             }
             return false;
+        }
+
+        bool RaycastNavMesh(out Vector3 target)
+        {
+            target = new Vector3();
+            return true;
         }
 
         void SetCursor(CursorType type)
