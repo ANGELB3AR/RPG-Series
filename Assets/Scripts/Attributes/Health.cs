@@ -4,6 +4,7 @@ using RPG.Saving;
 using RPG.Stats;
 using System;
 using GameDevTV.Utils;
+using UnityEngine.Events;
 
 namespace RPG.Attributes
 {
@@ -11,6 +12,7 @@ namespace RPG.Attributes
     {
         [Tooltip("How much player heals on level up events")]
         [SerializeField] float regenerationPercentage = 70;
+        [SerializeField] UnityEvent takeDamage;
 
         LazyValue<float> healthPoints;
 
@@ -61,6 +63,10 @@ namespace RPG.Attributes
             {
                 Die();
                 AwardExperience(instigator);
+            }
+            else
+            {
+            takeDamage.Invoke();
             }
         }
 
