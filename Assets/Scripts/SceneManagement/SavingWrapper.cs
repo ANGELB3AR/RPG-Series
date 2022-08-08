@@ -25,11 +25,8 @@ namespace RPG.SceneManagement
         IEnumerator LoadLastScene()
         {
             yield return savingSystem.LoadLastScene(defaultSaveFile);
-            print("LOADED SAVE FILE");
             fader.FadeOutImmediate();
-            print("FADED OUT");
             yield return fader.FadeIn(fadeInTime);
-            print("FADED BACK IN");
         }
 
         void Update()

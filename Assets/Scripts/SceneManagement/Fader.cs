@@ -42,9 +42,9 @@ namespace RPG.SceneManagement
 
         IEnumerator FadeRoutine(float target, float time)
         {
-            while (Mathf.Approximately(canvasGroup.alpha, target))
+            while (!Mathf.Approximately(canvasGroup.alpha, target))
             {
-                canvasGroup.alpha += Mathf.MoveTowards(canvasGroup.alpha, target, Time.deltaTime / time);
+                canvasGroup.alpha = Mathf.MoveTowards(canvasGroup.alpha, target, Time.deltaTime / time);
                 yield return null;
             }
         }
