@@ -62,7 +62,6 @@ namespace RPG.SceneManagement
             savingWrapper.Load();
 
             Portal otherPortal = GetOtherPortal();
-            print($"Portal: {otherPortal}");
             UpdatePlayer(otherPortal);
 
             savingWrapper.Save();
@@ -76,38 +75,18 @@ namespace RPG.SceneManagement
 
         Portal GetOtherPortal()
         {
-            print("Searching for portal");
             foreach (Portal portal in FindObjectsOfType<Portal>())
             {
                 if (portal == this) { continue; }
                 if (portal.destination != destination) { continue; }
-                print($"Found portal: {portal}");
                 return portal;
             }
-            print("Portal not found");
             return null;
         }
 
         void UpdatePlayer(Portal otherPortal)
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
-
-            if (otherPortal == null)
-            {
-                Debug.Log($"Unable to find other portal in scene.  Make sure there is a portal with the identifier {destination}");
-                return;
-            }
-            if (otherPortal.spawnPoint == null)
-            {
-                Debug.Log($"{name} does not have a spawn point assigned");
-                return;
-            }
-            if (player == null)
-            {
-                Debug.Log("Unable to find object with 'Player' tag.  Please make sure the player is tagged with 'Player'.");
-                return;
-            }
-
             player.GetComponent<NavMeshAgent>().enabled = false;
             player.transform.position = otherPortal.spawnPoint.position;
             player.transform.rotation = otherPortal.spawnPoint.rotation;
