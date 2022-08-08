@@ -56,7 +56,7 @@ namespace RPG.SceneManagement
             savingWrapper.Save();
 
             yield return SceneManager.LoadSceneAsync(sceneToLoad);
-            PlayerController newPlayerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+            playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
             playerController.enabled = false;
 
             savingWrapper.Load();
@@ -70,7 +70,7 @@ namespace RPG.SceneManagement
             yield return new WaitForSeconds(fadeWaitTime);
             fader.FadeIn(fadeInTime);
 
-            newPlayerController.enabled = true;
+            playerController.enabled = true;
             Destroy(gameObject);
         }
 
@@ -95,6 +95,11 @@ namespace RPG.SceneManagement
             if (otherPortal == null)
             {
                 Debug.Log($"Unable to find other portal in scene.  Make sure there is a portal with the identifier {destination}");
+                return;
+            }
+            if (otherPortal.spawnPoint == null)
+            {
+                Debug.Log($"{name} does not have a spawn point assigned");
                 return;
             }
             if (player == null)
