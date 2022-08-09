@@ -4,12 +4,13 @@ using UnityEngine;
 
 namespace RPG.Core
 {
+    [RequireComponent(typeof(AudioSource))]
     public class RandomizeAudio : MonoBehaviour
     {
         [SerializeField] AudioClip[] clips;
 
         AudioSource audioSource;
-        AudioClip currentClip;
+        AudioClip currentClip = null;
 
         void Awake()
         {
