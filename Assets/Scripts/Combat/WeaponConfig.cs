@@ -4,7 +4,7 @@ using RPG.Attributes;
 namespace RPG.Combat
 {
     [CreateAssetMenu(fileName = "NewWeapon", menuName = "Weapons/Create New Weapon")]
-    public class Weapon : ScriptableObject
+    public class WeaponConfig : ScriptableObject
     {
         [SerializeField] AnimatorOverrideController animatorOverride = null;
         [SerializeField] GameObject equippedPrefab = null;
