@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GreatSword
   m_EditorClassIdentifier: 
   animatorOverride: {fileID: 22100000, guid: 3a343dc17d2502d4f8854e317eab307f, type: 2}
-  equippedPrefab: {fileID: 4151097766641074970, guid: 2dfb007e220201846a3488a070ee3b08, type: 3}
+  equippedPrefab: {fileID: 7275135720844282573, guid: 2dfb007e220201846a3488a070ee3b08, type: 3}
   weaponRange: 4
   weaponDamage: 8
   percentageBonus: 5
