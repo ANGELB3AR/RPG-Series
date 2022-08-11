@@ -1011,7 +1011,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6960370520115305956, guid: 4a80ae96fd3243d49ac6f9f64e65c585, type: 3}
       propertyPath: sceneToLoad
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7520710331235221982, guid: 4a80ae96fd3243d49ac6f9f64e65c585, type: 3}
       propertyPath: m_Name
@@ -1912,7 +1912,7 @@ PrefabInstance:
     - target: {fileID: 2795027926136736052, guid: 4eea182edd7e3f847968b326262232e1, type: 3}
       propertyPath: defaultWeapon
       value: 
-      objectReference: {fileID: 11400000, guid: 5830e14dd43ab674db1cd6a398984d3b, type: 2}
+      objectReference: {fileID: 11400000, guid: 49b14aa5f3943d442b97033ea95dc245, type: 2}
     - target: {fileID: 3368212025457938845, guid: 4eea182edd7e3f847968b326262232e1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2397,7 +2397,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6960370520115305956, guid: 4a80ae96fd3243d49ac6f9f64e65c585, type: 3}
       propertyPath: sceneToLoad
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7520710331235221982, guid: 4a80ae96fd3243d49ac6f9f64e65c585, type: 3}
       propertyPath: m_Name
