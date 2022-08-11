@@ -22,79 +22,79 @@ MonoBehaviour:
     - health: 240
       attackDamage: 15
       experienceReward: 0
-      experienceRequired: 2000
+      experienceRequired: 200
     - health: 280
       attackDamage: 20
       experienceReward: 0
-      experienceRequired: 5000
+      experienceRequired: 600
     - health: 320
       attackDamage: 25
       experienceReward: 0
-      experienceRequired: 9000
+      experienceRequired: 1200
     - health: 360
       attackDamage: 30
       experienceReward: 0
-      experienceRequired: 14000
+      experienceRequired: 2000
     - health: 400
       attackDamage: 35
       experienceReward: 0
-      experienceRequired: 20000
+      experienceRequired: 3000
     - health: 440
       attackDamage: 40
       experienceReward: 0
-      experienceRequired: 27000
+      experienceRequired: 4200
     - health: 480
       attackDamage: 45
       experienceReward: 0
-      experienceRequired: 35000
+      experienceRequired: 5600
     - health: 520
       attackDamage: 50
       experienceReward: 0
-      experienceRequired: 44000
+      experienceRequired: 7200
     - health: 560
       attackDamage: 55
       experienceReward: 0
-      experienceRequired: 54000
+      experienceRequired: 9000
     - health: 600
       attackDamage: 60
       experienceReward: 0
-      experienceRequired: 65000
+      experienceRequired: 11000
     - health: 640
       attackDamage: 65
       experienceReward: 0
-      experienceRequired: 77000
+      experienceRequired: 13200
     - health: 680
       attackDamage: 70
       experienceReward: 0
-      experienceRequired: 90000
+      experienceRequired: 15600
     - health: 720
       attackDamage: 75
       experienceReward: 0
-      experienceRequired: 104000
+      experienceRequired: 18200
     - health: 760
       attackDamage: 80
       experienceReward: 0
-      experienceRequired: 119000
+      experienceRequired: 21000
     - health: 800
       attackDamage: 85
       experienceReward: 0
-      experienceRequired: 135000
+      experienceRequired: 24000
     - health: 840
       attackDamage: 90
       experienceReward: 0
-      experienceRequired: 152000
+      experienceRequired: 27200
     - health: 880
       attackDamage: 95
       experienceReward: 0
-      experienceRequired: 170000
+      experienceRequired: 30600
     - health: 920
       attackDamage: 100
       experienceReward: 0
-      experienceRequired: 189000
+      experienceRequired: 34200
     - health: 960
       attackDamage: 105
       experienceReward: 0
-      experienceRequired: 209000
+      experienceRequired: 38000
   - characterClass: 1
     levels:
     - health: 80
