@@ -97,247 +97,247 @@ MonoBehaviour:
       experienceRequired: 38000
   - characterClass: 1
     levels:
-    - health: 80
+    - health: 60
       attackDamage: 6.25
       experienceReward: 80
       experienceRequired: 0
-    - health: 120
+    - health: 90
       attackDamage: 8
       experienceReward: 120
       experienceRequired: 0
-    - health: 160
+    - health: 120
       attackDamage: 9
       experienceReward: 160
       experienceRequired: 0
-    - health: 200
+    - health: 150
       attackDamage: 10
       experienceReward: 200
       experienceRequired: 0
-    - health: 240
+    - health: 180
       attackDamage: 11
       experienceReward: 240
       experienceRequired: 0
-    - health: 280
+    - health: 210
       attackDamage: 13
       experienceReward: 280
       experienceRequired: 0
-    - health: 320
+    - health: 240
       attackDamage: 14
       experienceReward: 320
       experienceRequired: 0
-    - health: 360
+    - health: 270
       attackDamage: 15
       experienceReward: 360
       experienceRequired: 0
-    - health: 400
+    - health: 300
       attackDamage: 16
       experienceReward: 400
       experienceRequired: 0
-    - health: 440
+    - health: 330
       attackDamage: 18
       experienceReward: 440
       experienceRequired: 0
-    - health: 480
+    - health: 360
       attackDamage: 19
       experienceReward: 480
       experienceRequired: 0
-    - health: 520
+    - health: 390
       attackDamage: 20
       experienceReward: 520
       experienceRequired: 0
-    - health: 560
+    - health: 420
       attackDamage: 21
       experienceReward: 560
       experienceRequired: 0
-    - health: 600
+    - health: 450
       attackDamage: 23
       experienceReward: 600
       experienceRequired: 0
-    - health: 640
+    - health: 480
       attackDamage: 24
       experienceReward: 640
       experienceRequired: 0
-    - health: 680
+    - health: 510
       attackDamage: 25
       experienceReward: 680
       experienceRequired: 0
-    - health: 720
+    - health: 540
       attackDamage: 26
       experienceReward: 720
       experienceRequired: 0
-    - health: 760
+    - health: 570
       attackDamage: 28
       experienceReward: 760
       experienceRequired: 0
-    - health: 800
+    - health: 600
       attackDamage: 29
       experienceReward: 800
       experienceRequired: 0
-    - health: 840
+    - health: 630
       attackDamage: 30
       experienceReward: 840
       experienceRequired: 0
   - characterClass: 2
     levels:
-    - health: 56
+    - health: 42
       attackDamage: 15
       experienceReward: 100
       experienceRequired: 0
-    - health: 84
+    - health: 63
       attackDamage: 18
       experienceReward: 150
       experienceRequired: 0
-    - health: 112
+    - health: 84
       attackDamage: 21
       experienceReward: 200
       experienceRequired: 0
-    - health: 140
+    - health: 105
       attackDamage: 24
       experienceReward: 250
       experienceRequired: 0
-    - health: 168
+    - health: 126
       attackDamage: 27
       experienceReward: 300
       experienceRequired: 0
-    - health: 196
+    - health: 147
       attackDamage: 30
       experienceReward: 350
       experienceRequired: 0
-    - health: 224
+    - health: 168
       attackDamage: 33
       experienceReward: 400
       experienceRequired: 0
-    - health: 252
+    - health: 189
       attackDamage: 36
       experienceReward: 450
       experienceRequired: 0
-    - health: 280
+    - health: 210
       attackDamage: 39
       experienceReward: 500
       experienceRequired: 0
-    - health: 308
+    - health: 231
       attackDamage: 42
       experienceReward: 550
       experienceRequired: 0
-    - health: 336
+    - health: 252
       attackDamage: 45
       experienceReward: 600
       experienceRequired: 0
-    - health: 364
+    - health: 273
       attackDamage: 48
       experienceReward: 650
       experienceRequired: 0
-    - health: 392
+    - health: 294
       attackDamage: 51
       experienceReward: 700
       experienceRequired: 0
-    - health: 420
+    - health: 315
       attackDamage: 54
       experienceReward: 750
       experienceRequired: 0
-    - health: 448
+    - health: 336
       attackDamage: 57
       experienceReward: 800
       experienceRequired: 0
-    - health: 476
+    - health: 357
       attackDamage: 60
       experienceReward: 850
       experienceRequired: 0
-    - health: 504
+    - health: 378
       attackDamage: 63
       experienceReward: 900
       experienceRequired: 0
-    - health: 532
+    - health: 399
       attackDamage: 66
       experienceReward: 950
       experienceRequired: 0
-    - health: 560
+    - health: 420
       attackDamage: 69
       experienceReward: 1000
       experienceRequired: 0
-    - health: 588
+    - health: 441
       attackDamage: 72
       experienceReward: 1050
       experienceRequired: 0
   - characterClass: 3
     levels:
-    - health: 160
+    - health: 120
       attackDamage: 20
       experienceReward: 160
       experienceRequired: 0
-    - health: 240
+    - health: 180
       attackDamage: 24
       experienceReward: 240
       experienceRequired: 0
-    - health: 320
+    - health: 240
       attackDamage: 28
       experienceReward: 320
       experienceRequired: 0
-    - health: 400
+    - health: 300
       attackDamage: 32
       experienceReward: 400
       experienceRequired: 0
-    - health: 480
+    - health: 360
       attackDamage: 36
       experienceReward: 480
       experienceRequired: 0
-    - health: 560
+    - health: 420
       attackDamage: 40
       experienceReward: 560
       experienceRequired: 0
-    - health: 640
+    - health: 480
       attackDamage: 44
       experienceReward: 640
       experienceRequired: 0
-    - health: 720
+    - health: 540
       attackDamage: 48
       experienceReward: 720
       experienceRequired: 0
-    - health: 800
+    - health: 600
       attackDamage: 52
       experienceReward: 800
       experienceRequired: 0
-    - health: 880
+    - health: 660
       attackDamage: 56
       experienceReward: 880
       experienceRequired: 0
-    - health: 960
+    - health: 720
       attackDamage: 60
       experienceReward: 960
       experienceRequired: 0
-    - health: 1040
+    - health: 780
       attackDamage: 64
       experienceReward: 1040
       experienceRequired: 0
-    - health: 1120
+    - health: 840
       attackDamage: 68
       experienceReward: 1120
       experienceRequired: 0
-    - health: 1200
+    - health: 900
       attackDamage: 72
       experienceReward: 1200
       experienceRequired: 0
-    - health: 1280
+    - health: 960
       attackDamage: 76
       experienceReward: 1280
       experienceRequired: 0
-    - health: 1360
+    - health: 1020
       attackDamage: 80
       experienceReward: 1360
       experienceRequired: 0
-    - health: 1440
+    - health: 1080
       attackDamage: 84
       experienceReward: 1440
       experienceRequired: 0
-    - health: 1520
+    - health: 1140
       attackDamage: 88
       experienceReward: 1520
       experienceRequired: 0
-    - health: 1600
+    - health: 1200
       attackDamage: 92
       experienceReward: 1600
       experienceRequired: 0
-    - health: 1680
+    - health: 1260
       attackDamage: 96
       experienceReward: 1680
       experienceRequired: 0
