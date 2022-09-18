@@ -10,7 +10,7 @@ using GameDevTV.Inventories;
 
 namespace RPG.Combat
 {
-    public class Fighter : MonoBehaviour, IAction, ISaveable, IModifierProvider
+    public class Fighter : MonoBehaviour, IAction, ISaveable
     {
         [SerializeField] float timeBetweenAttacks = 1f;
         [SerializeField] Transform rightHandTransform = null;
@@ -131,22 +131,6 @@ namespace RPG.Combat
         {
             animator.ResetTrigger(attackAnimParam);
             animator.SetTrigger(stopAttackAnimParam);
-        }
-
-        public IEnumerable<float> GetAdditiveModifiers(Stat stat)
-        {
-            if (stat == Stat.AttackDamage)
-            {
-                yield return currentWeaponConfig.GetDamage();
-            }
-        }
-
-        public IEnumerable<float> GetPercentageModifiers(Stat stat)
-        {
-            if (stat == Stat.AttackDamage)
-            {
-                yield return currentWeaponConfig.GetPercentageBonus();
-            }
         }
 
         // Called from Animation Event
