@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddb4c6dba0c2c844e93e7b247c4eff03, type: 3}
   m_Name: GreatSword
   m_EditorClassIdentifier: 
+  itemID: 2bf71e14-7f3e-4439-b9be-b82748ff0b86
+  displayName: 
+  description: 
+  icon: {fileID: 21300000, guid: d19901b0ee3c38743a7d383bd484b0b5, type: 3}
+  pickup: {fileID: 9160188900869625163, guid: 42cb0e8da4d8aae43ad62e85dac21665, type: 3}
+  stackable: 0
+  allowedEquipLocation: 5
   animatorOverride: {fileID: 22100000, guid: 3a343dc17d2502d4f8854e317eab307f, type: 2}
   equippedPrefab: {fileID: 7275135720844282573, guid: 2dfb007e220201846a3488a070ee3b08, type: 3}
   weaponRange: 4

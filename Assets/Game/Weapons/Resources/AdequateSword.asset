@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddb4c6dba0c2c844e93e7b247c4eff03, type: 3}
   m_Name: AdequateSword
   m_EditorClassIdentifier: 
+  itemID: 49d58a9b-0af8-4e33-93c3-f640087124d4
+  displayName: 
+  description: 
+  icon: {fileID: 21300000, guid: d19901b0ee3c38743a7d383bd484b0b5, type: 3}
+  pickup: {fileID: 1444529642779427112, guid: 7d8d8b95ee2daed47a26bb40f6a50b60, type: 3}
+  stackable: 0
+  allowedEquipLocation: 5
   animatorOverride: {fileID: 22100000, guid: 3a343dc17d2502d4f8854e317eab307f, type: 2}
   equippedPrefab: {fileID: 2387638543718561518, guid: f545b5009882cad438e802228726c850, type: 3}
   weaponRange: 2

@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddb4c6dba0c2c844e93e7b247c4eff03, type: 3}
   m_Name: SimpleBow (Blue)
   m_EditorClassIdentifier: 
+  itemID: 37aa5ae6-a03d-4c06-9118-752e9534164a
+  displayName: 
+  description: 
+  icon: {fileID: 21300000, guid: f8078c2bb5ee88d4a9472f76e501e0f3, type: 3}
+  pickup: {fileID: 0}
+  stackable: 0
+  allowedEquipLocation: 5
   animatorOverride: {fileID: 22100000, guid: a8bdf5a670cdc04438fb02ad98f89f66, type: 2}
   equippedPrefab: {fileID: 6827848042631755211, guid: 0bd445027daf0ab4a877f8d3df5f0433, type: 3}
   weaponRange: 15

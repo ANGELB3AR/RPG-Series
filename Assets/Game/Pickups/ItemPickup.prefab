@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6020998329038676200}
   - component: {fileID: 7896973878682997247}
-  - component: {fileID: 2057093156034618639}
+  - component: {fileID: -4667676049881897113}
+  - component: {fileID: 6114260305554318400}
   m_Layer: 0
   m_Name: ItemPickup
   m_TagString: Untagged
@@ -46,7 +47,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.61
   m_Center: {x: 0, y: 0, z: 0.62}
---- !u!114 &2057093156034618639
+--- !u!114 &-4667676049881897113
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,7 +56,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 4658040460232560776}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6df51d05a9df3e4985fb1c82daa2b02, type: 3}
+  m_Script: {fileID: 11500000, guid: 91f208ba0dbe65d478b628ca24b59c42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 0}
+--- !u!114 &6114260305554318400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4658040460232560776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf82b1bd767f9b64aa5701281c4816c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
