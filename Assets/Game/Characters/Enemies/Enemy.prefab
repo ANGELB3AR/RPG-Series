@@ -104,6 +104,10 @@ PrefabInstance:
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4286883785021262228, guid: 05009980673c7ec44aa6a4700c9c1efc, type: 3}
+      propertyPath: dropLibrary
+      value: 
+      objectReference: {fileID: 11400000, guid: 4a9d3a40c39a4ff49b3f53ad1121b6f4, type: 2}
+    - target: {fileID: 4286883785021262228, guid: 05009980673c7ec44aa6a4700c9c1efc, type: 3}
       propertyPath: dropLibrary.Array.size
       value: 6
       objectReference: {fileID: 0}
