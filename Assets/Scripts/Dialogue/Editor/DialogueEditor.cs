@@ -29,7 +29,7 @@ namespace RPG.Dialogue.Editor
 
         void OnGUI()
         {
-            Debug.Log("OnGUI");
+            
         }
     }
 }
