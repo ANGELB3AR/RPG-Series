@@ -13,20 +13,20 @@ MonoBehaviour:
   m_Name: New Dialogue
   m_EditorClassIdentifier: 
   nodes:
-  - uniqueID: 
-    text: 
-    children: []
   - uniqueID: a
-    text: Hello!
+    text: HAZZAH!
+    children: []
+  - uniqueID: b
+    text: Hello.
     children:
     - b
     - c
-  - uniqueID: b
+  - uniqueID: c
     text: Hello yourself.
     children: []
-  - uniqueID: c
+  - uniqueID: d
     text: Go away!
     children: []
   - uniqueID: 
-    text: 
+    text: Die slow!
     children: []
