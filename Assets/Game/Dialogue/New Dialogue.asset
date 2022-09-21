@@ -14,11 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - uniqueID: a4cf7431-7679-4774-bd87-e0301f5a9b43
-    text: 
-    children: []
+    text: Hello
+    children:
+    - 49447b46-2843-4ac4-ad61-fd2cdc59c493
+    - 1bb3b415-ff7b-4f2b-9845-9b1383e0151c
     rect:
       serializedVersion: 2
-      x: 0
-      y: 0
+      x: 48
+      y: 51
       width: 200
       height: 100
