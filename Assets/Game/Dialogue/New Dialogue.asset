@@ -26,29 +26,39 @@ MonoBehaviour:
   - uniqueID: a72bc903-767a-4402-9515-3946572c3a56
     text: Hi!
     children:
-    - 00f9e3b2-c09f-431d-8c2b-9699e8924593
-    - c27dfd99-c30b-4b4f-8416-4fcbe35df87e
+    - 9011a080-c546-4751-aaf0-0939e9ac6090
+    - 5fd1e630-a809-4b8d-aeb9-f172447e8087
     rect:
       serializedVersion: 2
       x: 470
       y: 71
       width: 200
       height: 100
-  - uniqueID: 00f9e3b2-c09f-431d-8c2b-9699e8924593
-    text: What's up?
+  - uniqueID: 9011a080-c546-4751-aaf0-0939e9ac6090
+    text: 
     children: []
     rect:
       serializedVersion: 2
-      x: 805
-      y: 29
+      x: 826
+      y: 13
       width: 200
       height: 100
-  - uniqueID: c27dfd99-c30b-4b4f-8416-4fcbe35df87e
-    text: Nevermind
+  - uniqueID: 5fd1e630-a809-4b8d-aeb9-f172447e8087
+    text: 
+    children:
+    - a7d61e48-e174-4c68-b696-4de02287d85e
+    rect:
+      serializedVersion: 2
+      x: 809
+      y: 159
+      width: 200
+      height: 100
+  - uniqueID: a7d61e48-e174-4c68-b696-4de02287d85e
+    text: 
     children: []
     rect:
       serializedVersion: 2
-      x: 802
-      y: 142
+      x: 1094
+      y: 97
       width: 200
       height: 100
