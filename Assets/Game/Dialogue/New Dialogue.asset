@@ -13,14 +13,42 @@ MonoBehaviour:
   m_Name: New Dialogue
   m_EditorClassIdentifier: 
   nodes:
-  - uniqueID: a4cf7431-7679-4774-bd87-e0301f5a9b43
+  - uniqueID: ffa1e5f0-afa6-4819-a9b0-498df1267351
     text: Hello
     children:
-    - 49447b46-2843-4ac4-ad61-fd2cdc59c493
-    - 1bb3b415-ff7b-4f2b-9845-9b1383e0151c
+    - a72bc903-767a-4402-9515-3946572c3a56
     rect:
       serializedVersion: 2
-      x: 48
-      y: 51
+      x: 149
+      y: 84
+      width: 200
+      height: 100
+  - uniqueID: a72bc903-767a-4402-9515-3946572c3a56
+    text: Hi!
+    children:
+    - 00f9e3b2-c09f-431d-8c2b-9699e8924593
+    - c27dfd99-c30b-4b4f-8416-4fcbe35df87e
+    rect:
+      serializedVersion: 2
+      x: 470
+      y: 71
+      width: 200
+      height: 100
+  - uniqueID: 00f9e3b2-c09f-431d-8c2b-9699e8924593
+    text: What's up?
+    children: []
+    rect:
+      serializedVersion: 2
+      x: 805
+      y: 29
+      width: 200
+      height: 100
+  - uniqueID: c27dfd99-c30b-4b4f-8416-4fcbe35df87e
+    text: Nevermind
+    children: []
+    rect:
+      serializedVersion: 2
+      x: 802
+      y: 142
       width: 200
       height: 100
