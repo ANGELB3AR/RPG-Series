@@ -13,12 +13,6 @@ namespace RPG.Dialogue
 
         Dictionary<string, DialogueNode> nodeLookup = new Dictionary<string, DialogueNode>();
 
-#if UNITY_EDITOR
-        void Awake()
-        {
-        }
-#endif
-
         void OnValidate()
         {
             nodeLookup.Clear();
@@ -41,7 +35,7 @@ namespace RPG.Dialogue
 
         public IEnumerable<DialogueNode> GetAllChildren(DialogueNode parentNode)
         {
-            foreach (string childID in parentNode.children)
+            foreach (string childID in parentNode.GetChildren())
             {
                 if (nodeLookup.ContainsKey(childID))
                 {
@@ -50,40 +44,57 @@ namespace RPG.Dialogue
             }
         }
 
+#if UNITY_EDITOR
         public void CreateNode(DialogueNode parentNode)
         {
-            DialogueNode newNode = CreateInstance<DialogueNode>();
-            newNode.name = Guid.NewGuid().ToString();
+            DialogueNode newNode = MakeNode(parentNode);
             Undo.RegisterCreatedObjectUndo(newNode, "Create Dialogue Node");
-            if (parentNode != null)
-            {
-                parentNode.children.Add(newNode.name);
-            }
-            nodes.Add(newNode);
-            OnValidate();
+            Undo.RecordObject(this, "Add Dialogue Node");
+            AddNode(newNode);
         }
 
         public void DeleteNode(DialogueNode nodeToDelete)
         {
+            Undo.RecordObject(this, "Delete Dialoge Node");
             nodes.Remove(nodeToDelete);
             OnValidate();
             ClearChildren(nodeToDelete);
             Undo.DestroyObjectImmediate(nodeToDelete);
         }
 
+        DialogueNode MakeNode(DialogueNode parentNode)
+        {
+            DialogueNode newNode = CreateInstance<DialogueNode>();
+            newNode.name = Guid.NewGuid().ToString();
+            if (parentNode != null)
+            {
+                parentNode.AddChild(newNode.name);
+            }
+
+            return newNode;
+        }
+
+        void AddNode(DialogueNode newNode)
+        {
+            nodes.Add(newNode);
+            OnValidate();
+        }
+
         private void ClearChildren(DialogueNode nodeToDelete)
         {
             foreach (DialogueNode node in GetAllNodes())
             {
-                node.children.Remove(nodeToDelete.name);
+                node.RemoveChild(nodeToDelete.name);
             }
         }
+#endif
 
         public void OnBeforeSerialize()
         {
             if (nodes.Count == 0)
             {
-                CreateNode(null);
+                DialogueNode newNode = MakeNode(null);
+                AddNode(newNode);
             }
 
             if (AssetDatabase.GetAssetPath(this) != "")
