@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: c72e5760c1813f144a6f4ed7a8a8589f
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - MADE Okine Sans PERSONAL USE
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: f61ad473b3898974bab099a4c8241856, type: 3}
+  - {fileID: 12800000, guid: a7f9a8cdebdf9644f9d6f6883c7389d0, type: 3}
+  - {fileID: 12800000, guid: 103f80b1d8447944e9034cb83658ca74, type: 3}
+  - {fileID: 12800000, guid: c3618580357892a47b439d3f0ec9ade7, type: 3}
+  - {fileID: 12800000, guid: 142876f5005217c4aaa36a7dd22836a3, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
