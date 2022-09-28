@@ -11,6 +11,10 @@ namespace RPG.UI
     {
         [SerializeField] TextMeshProUGUI AIText;
         [SerializeField] Button nextButton;
+        [SerializeField] GameObject AIResponse;
+        [SerializeField] Transform choiceRoot;
+        [SerializeField] GameObject choicePrefab;
+        [SerializeField] Button quitButton;
 
         PlayerConversant playerConversant;
 
@@ -19,22 +23,67 @@ namespace RPG.UI
             playerConversant = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerConversant>();
         }
 
+        void OnEnable()
+        {
+            playerConversant.onConversationUpdated += UpdateUI;
+        }
+
+        void OnDisable()
+        {
+            playerConversant.onConversationUpdated -= UpdateUI;
+        }
+
         void Start()
         {
+            nextButton.onClick.AddListener(() => playerConversant.Next());
+            quitButton.onClick.AddListener(() => playerConversant.Quit());
             UpdateUI();
-            nextButton.onClick.AddListener(Next);
         }
 
         void UpdateUI()
         {
-            AIText.text = playerConversant.GetText();
-            nextButton.gameObject.SetActive(playerConversant.HasNext());
+            gameObject.SetActive(playerConversant.IsActive());
+            if (!playerConversant.IsActive()) { return; }
+
+            AIResponse.SetActive(!playerConversant.IsChoosing());
+            choiceRoot.gameObject.SetActive(playerConversant.IsChoosing());
+
+            if (playerConversant.IsChoosing())
+            {
+                BuildChoiceList();
+            }
+            else
+            {
+                AIText.text = playerConversant.GetText();
+                nextButton.gameObject.SetActive(playerConversant.HasNext());
+            }
         }
 
         void Next()
         {
             playerConversant.Next();
-            UpdateUI();
+        }
+
+        private void BuildChoiceList()
+        {
+            choiceRoot.DetachChildren();
+            foreach (Transform item in choiceRoot)
+            {
+                Destroy(item.gameObject);
+            }
+
+            foreach (DialogueNode choice in playerConversant.GetChoices())
+            {
+                GameObject choiceInstance = Instantiate(choicePrefab, choiceRoot);
+                var textComponent = choiceInstance.GetComponentInChildren<TextMeshProUGUI>();
+                textComponent.text = choice.GetText();
+                
+                Button button = choiceInstance.GetComponentInChildren<Button>();
+                button.onClick.AddListener(() =>
+                {
+                    playerConversant.SelectChoice(choice);
+                });
+            }
         }
     }
 }

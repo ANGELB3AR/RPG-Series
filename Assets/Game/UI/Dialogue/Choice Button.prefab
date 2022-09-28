@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I've lived here all my life!
+  m_text: I came here from Newton.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9bcec723a80f6eb489b706b1a7ffbc8b, type: 2}
   m_sharedMaterial: {fileID: -6607165702228116511, guid: 9bcec723a80f6eb489b706b1a7ffbc8b, type: 2}
