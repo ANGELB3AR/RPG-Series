@@ -28,7 +28,7 @@ namespace RPG.UI
             playerConversant.onConversationUpdated += UpdateUI;
         }
 
-        void OnDisable()
+        void OnDestroy()
         {
             playerConversant.onConversationUpdated -= UpdateUI;
         }
