@@ -12,6 +12,8 @@ namespace RPG.Dialogue
         [SerializeField] string text;
         [SerializeField] List<string> children = new List<string>();
         [SerializeField] Rect rect = new Rect(0, 0, 200, 100);
+        [SerializeField] string onEnterAction;
+        [SerializeField] string onExitAction;
 
         public string GetText()
         {
@@ -28,12 +30,22 @@ namespace RPG.Dialogue
             return rect;
         }
 
-#if UNITY_EDITOR
         public bool IsPlayerSpeaking()
         {
             return isPlayerSpeaking;
         }
 
+        public string GetOnEnterAction()
+        {
+            return onEnterAction;
+        }    
+
+        public string GetOnExitAction()
+        {
+            return onExitAction;
+        }
+
+#if UNITY_EDITOR
         public void SetPlayerSpeaking(bool newIsPlayerSpeaking)
         {
             Undo.RecordObject(this, "Set Dialogue Speaker");
