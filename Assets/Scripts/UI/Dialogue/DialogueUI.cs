@@ -23,18 +23,9 @@ namespace RPG.UI
             playerConversant = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerConversant>();
         }
 
-        void OnEnable()
-        {
-            playerConversant.onConversationUpdated += UpdateUI;
-        }
-
-        void OnDestroy()
-        {
-            playerConversant.onConversationUpdated -= UpdateUI;
-        }
-
         void Start()
         {
+            playerConversant.onConversationUpdated += UpdateUI;
             nextButton.onClick.AddListener(() => playerConversant.Next());
             quitButton.onClick.AddListener(() => playerConversant.Quit());
             UpdateUI();
@@ -83,6 +74,11 @@ namespace RPG.UI
                     playerConversant.SelectChoice(choice);
                 });
             }
+        }
+
+        void OnDestroy()
+        {
+            playerConversant.onConversationUpdated -= UpdateUI;
         }
     }
 }
