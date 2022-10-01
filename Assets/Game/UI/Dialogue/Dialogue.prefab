@@ -271,6 +271,7 @@ MonoBehaviour:
   choiceRoot: {fileID: 5733606518025139040}
   choicePrefab: {fileID: 4959044715607852631, guid: d903f87ac6f6f304793f476c070c0bb5, type: 3}
   quitButton: {fileID: 1083188307488181382}
+  conversantName: {fileID: 3767135912578838639}
 --- !u!114 &6913263159081196943
 MonoBehaviour:
   m_ObjectHideFlags: 0
