@@ -218,6 +218,26 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &-3905787082621500962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673269343523115638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf40f597a294f848a7da0c17e90e18a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statuses:
+  - quest: {fileID: 11400000, guid: 5e4b88612a6afb24ebde59bce5eb5ba2, type: 2}
+    completedObjectives:
+    - A
+    - B
+  - quest: {fileID: 11400000, guid: 9e4a8bc1bb41d3447a65198882bcb7bf, type: 2}
+    completedObjectives:
+    - 2
 --- !u!114 &273217045456646980
 MonoBehaviour:
   m_ObjectHideFlags: 0
