@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 767222a460a51d144a432490cb5c20bf, type: 3}
   m_Name: Mother Hubbard's Bunions
   m_EditorClassIdentifier: 
-  objectives: []
+  objectives:
+  - 2
+  - 3
