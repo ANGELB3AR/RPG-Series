@@ -147,8 +147,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d0a194ce4629330498a6c988fd854698, type: 2}
-  m_sharedMaterial: {fileID: -6432858879873553409, guid: d0a194ce4629330498a6c988fd854698, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 451e23a1fe705804782bb0d20399affe, type: 2}
+  m_sharedMaterial: {fileID: -5871962980967308875, guid: 451e23a1fe705804782bb0d20399affe, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -406,8 +406,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Go to the town hall
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d0a194ce4629330498a6c988fd854698, type: 2}
-  m_sharedMaterial: {fileID: -6432858879873553409, guid: d0a194ce4629330498a6c988fd854698, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 451e23a1fe705804782bb0d20399affe, type: 2}
+  m_sharedMaterial: {fileID: -5871962980967308875, guid: 451e23a1fe705804782bb0d20399affe, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -431,8 +431,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

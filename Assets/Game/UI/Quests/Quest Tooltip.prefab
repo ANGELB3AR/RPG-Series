@@ -68,8 +68,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Objectives
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d0a194ce4629330498a6c988fd854698, type: 2}
-  m_sharedMaterial: {fileID: -6432858879873553409, guid: d0a194ce4629330498a6c988fd854698, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 451e23a1fe705804782bb0d20399affe, type: 2}
+  m_sharedMaterial: {fileID: -5871962980967308875, guid: 451e23a1fe705804782bb0d20399affe, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -205,8 +205,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d0a194ce4629330498a6c988fd854698, type: 2}
-  m_sharedMaterial: {fileID: -6432858879873553409, guid: d0a194ce4629330498a6c988fd854698, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 451e23a1fe705804782bb0d20399affe, type: 2}
+  m_sharedMaterial: {fileID: -5871962980967308875, guid: 451e23a1fe705804782bb0d20399affe, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -340,8 +340,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Rewards
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d0a194ce4629330498a6c988fd854698, type: 2}
-  m_sharedMaterial: {fileID: -6432858879873553409, guid: d0a194ce4629330498a6c988fd854698, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 451e23a1fe705804782bb0d20399affe, type: 2}
+  m_sharedMaterial: {fileID: -5871962980967308875, guid: 451e23a1fe705804782bb0d20399affe, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -475,8 +475,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 300 coin
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d0a194ce4629330498a6c988fd854698, type: 2}
-  m_sharedMaterial: {fileID: -6432858879873553409, guid: d0a194ce4629330498a6c988fd854698, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 451e23a1fe705804782bb0d20399affe, type: 2}
+  m_sharedMaterial: {fileID: -5871962980967308875, guid: 451e23a1fe705804782bb0d20399affe, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
