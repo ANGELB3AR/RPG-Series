@@ -1,5 +1,59 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5785793118241114556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63248d43e9acfa14eb6541a1f5307559, type: 3}
+  m_Name: 02e657f1-b170-47ee-8a98-e7e06c709604
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I have the foot cream!
+  children:
+  - 70e8f9ae-3a07-48a8-be0f-ec5d70e01c8d
+  rect:
+    serializedVersion: 2
+    x: 377
+    y: 426
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: HasInventoryItem
+    parameters:
+    - ae8ff6c0-e5c8-45f0-8eb3-ae6a3eef6695
+--- !u!114 &-4137686172726879651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63248d43e9acfa14eb6541a1f5307559, type: 3}
+  m_Name: 70e8f9ae-3a07-48a8-be0f-ec5d70e01c8d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: That's amazing thank you!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 628
+    y: 426
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
 --- !u!114 &-3109864996430553877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,6 +154,8 @@ MonoBehaviour:
   - {fileID: 5059251861446747482}
   - {fileID: -3109864996430553877}
   - {fileID: -131027423210991627}
+  - {fileID: -5785793118241114556}
+  - {fileID: -4137686172726879651}
   newNodeOffset: {x: 250, y: 0}
 --- !u!114 &5059251861446747482
 MonoBehaviour:
@@ -171,6 +227,7 @@ MonoBehaviour:
   - ff390c52-6e13-49d6-b513-c35f994f9b29
   - 3f01e754-a16d-4ddf-a7d8-4510d117c231
   - 1322977d-4194-4da3-8b9b-77155a3dc3d0
+  - 02e657f1-b170-47ee-8a98-e7e06c709604
   rect:
     serializedVersion: 2
     x: 122
