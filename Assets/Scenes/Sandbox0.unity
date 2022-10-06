@@ -551,7 +551,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 92702564}
-  m_LocalRotation: {x: 0.016505063, y: -0.7907707, z: 0.021343168, w: 0.61151767}
+  m_LocalRotation: {x: 0.016505064, y: -0.7907707, z: 0.021343168, w: 0.61151767}
   m_LocalPosition: {x: -2.3789234, y: 12.52943, z: -4.093541}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4229,6 +4229,48 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &1111930839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111930813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 498f98aa176cbbd4baedb8eb3e91780f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: 9e4a8bc1bb41d3447a65198882bcb7bf, type: 2}
+  objective: Get the bunion cream from the pharmacy
+--- !u!114 &1111930840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111930813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 833aa29a3603b3c4cba68a01ae64d408, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: TestObjective
+  onTrigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1111930839}
+        m_TargetAssemblyTypeName: RPG.Quests.QuestCompletion, Assembly-CSharp
+        m_MethodName: CompleteObjective
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1129893191 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6623817798042417830, guid: 4eea182edd7e3f847968b326262232e1, type: 3}
@@ -5325,7 +5367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2685327803251354468, guid: 3439dfe9a7ffb6944bb8bb48eb3c1c18, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -570.749
+      value: -570.7455
       objectReference: {fileID: 0}
     - target: {fileID: 2685670885068239396, guid: 3439dfe9a7ffb6944bb8bb48eb3c1c18, type: 3}
       propertyPath: m_AnchorMax.x
@@ -6945,6 +6987,7 @@ Transform:
   - {fileID: 373506542}
   - {fileID: 1765140810}
   - {fileID: 1111930812}
+  - {fileID: 1681365209}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8003,6 +8046,149 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 488878, guid: 0c8b53b4a2c2a624d8f344f282d709aa, type: 3}
   m_PrefabInstance: {fileID: 1668335772}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1681365208
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1368108546}
+    m_Modifications:
+    - target: {fileID: -2519377354129293962, guid: 4eea182edd7e3f847968b326262232e1, type: 3}
+      propertyPath: patrolPath
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 960417516364427591, guid: 4eea182edd7e3f847968b326262232e1, type: 3}
+      propertyPath: m_Name
+      value: Enemy (Dialogue) (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2360534961043212307, guid: 4eea182edd7e3f847968b326262232e1, type: 3}
+      propertyPath: currentLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2795027926136736052, guid: 4eea182edd7e3f847968b326262232e1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2795027926136736052, guid: 4eea182edd7e3f847968b326262232e1, type: 3}
+      propertyPath: defaultWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: babd8dec50e6a524a82d6368979b9870, type: 2}
+    - target: {fileID: 6623817798042417830, guid: 4eea182edd7e3f847968b326262232e1, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623817798042417830, guid: 4eea182edd7e3f847968b326262232e1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 58.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623817798042417830, guid: 4eea182edd7e3f847968b326262232e1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 30.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623817798042417830, guid: 4eea182edd7e3f847968b326262232e1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -18.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623817798042417830, guid: 4eea182edd7e3f847968b326262232e1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.25559574
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623817798042417830, guid: 4eea182edd7e3f847968b326262232e1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623817798042417830, guid: 4eea182edd7e3f847968b326262232e1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9667838
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623817798042417830, guid: 4eea182edd7e3f847968b326262232e1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623817798042417830, guid: 4eea182edd7e3f847968b326262232e1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623817798042417830, guid: 4eea182edd7e3f847968b326262232e1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 209.618
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623817798042417830, guid: 4eea182edd7e3f847968b326262232e1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7208266891065718716, guid: 4eea182edd7e3f847968b326262232e1, type: 3}
+      propertyPath: uniqueIdentifier
+      value: 261be7ea-ae22-4309-8420-76137e2b2521
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7582163226461584323, guid: 4eea182edd7e3f847968b326262232e1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 4eea182edd7e3f847968b326262232e1, type: 3}
+--- !u!4 &1681365209 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6623817798042417830, guid: 4eea182edd7e3f847968b326262232e1, type: 3}
+  m_PrefabInstance: {fileID: 1681365208}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1681365210 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 960417516364427591, guid: 4eea182edd7e3f847968b326262232e1, type: 3}
+  m_PrefabInstance: {fileID: 1681365208}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1681365211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681365210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cdd043d3a0994e48b4e23906a41a334, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: 9e4a8bc1bb41d3447a65198882bcb7bf, type: 2}
+--- !u!114 &1681365212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681365210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 833aa29a3603b3c4cba68a01ae64d408, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: GiveQuest
+  onTrigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1681365211}
+        m_TargetAssemblyTypeName: RPG.Quests.QuestGiver, Assembly-CSharp
+        m_MethodName: GiveQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1681365213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681365210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fabe482bee50314b81026bbe6d2fac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 11400000, guid: df29205497439ae4d827fb9ffff5a5aa, type: 2}
+  conversantName: Mother Hubbard's Son
 --- !u!1 &1690848125
 GameObject:
   m_ObjectHideFlags: 0
@@ -8861,7 +9047,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1838201295}
-  m_LocalRotation: {x: 0.30046138, y: -0.55321723, z: 0.2233649, w: 0.7441652}
+  m_LocalRotation: {x: 0.30046138, y: -0.55321723, z: 0.22336489, w: 0.7441652}
   m_LocalPosition: {x: 18.59734, y: 2.91, z: -19.91875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9555,7 +9741,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2032949108}
-  m_LocalRotation: {x: 0.21267158, y: -0.49423525, z: 0.12611794, w: 0.8334246}
+  m_LocalRotation: {x: 0.21267155, y: -0.49423522, z: 0.1261179, w: 0.8334246}
   m_LocalPosition: {x: 12.8837, y: 5.197174, z: -7.966442}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Mother Hubbard's Bunions
   m_EditorClassIdentifier: 
   objectives:
-  - 2
-  - 3
+  - Get the bunion cream from the pharmacy
+  - Give the bunion cream to Mother Hubbard
