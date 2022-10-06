@@ -19,17 +19,17 @@ namespace RPG.UI.Quests
             title.text = quest.GetTitle();
             objectiveContainer.DetachChildren();
 
-            foreach (string objective in quest.GetObjectives())
+            foreach (var objective in quest.GetObjectives())
             {
                 GameObject prefab = objectivePrefab;
-                if (!status.IsObjectiveComplete(objective))
+                if (!status.IsObjectiveComplete(objective.reference))
                 {
                     prefab = objectiveIncompletePrefab;
                 }
 
                 GameObject objectiveInstance = Instantiate(prefab, objectiveContainer);
                 TextMeshProUGUI objectiveText = objectiveInstance.GetComponentInChildren<TextMeshProUGUI>();
-                objectiveText.text = objective;
+                objectiveText.text = objective.description;
             }
         }
     }

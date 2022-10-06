@@ -13,5 +13,10 @@ MonoBehaviour:
   m_Name: Mother Hubbard's Bunions
   m_EditorClassIdentifier: 
   objectives:
-  - Get the bunion cream from the pharmacy
-  - Give the bunion cream to Mother Hubbard
+  - reference: 1
+    description: Get the foot cream from the pharmacy
+  - reference: 2
+    description: Give the foot cream to Mother Hubbard
+  rewards:
+  - number: 1
+    item: {fileID: 11400000, guid: 5830e14dd43ab674db1cd6a398984d3b, type: 2}
