@@ -1,3 +1,4 @@
+using GameDevTV.Inventories;
 using GameDevTV.Saving;
 using System;
 using System.Collections;
@@ -30,6 +31,10 @@ namespace RPG.Quests
         {
             QuestStatus status = GetQuestStatus(quest);
             status.CompleteObjective(objective);
+            if (status.IsComplete())
+            {
+                GiveReward(quest);
+            }
             onUpdate?.Invoke();
         }
 
@@ -48,6 +53,18 @@ namespace RPG.Quests
                 }
             }
             return null;
+        }
+
+        void GiveReward(Quest quest)
+        {
+            foreach (var reward in quest.GetRewards())
+            {
+                bool success = GetComponent<Inventory>().AddToFirstEmptySlot(reward.item, reward.number);
+                if (!success)
+                {
+                    GetComponent<ItemDropper>().DropItem(reward.item, reward.number);
+                }
+            }
         }
 
         public object CaptureState()

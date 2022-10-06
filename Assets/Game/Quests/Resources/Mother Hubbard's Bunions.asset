@@ -20,3 +20,5 @@ MonoBehaviour:
   rewards:
   - number: 1
     item: {fileID: 11400000, guid: 5830e14dd43ab674db1cd6a398984d3b, type: 2}
+  - number: 3
+    item: {fileID: 11400000, guid: 07c0634a7ed211a41a0b7de6a27f407e, type: 2}
