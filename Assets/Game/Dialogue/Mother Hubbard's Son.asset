@@ -25,9 +25,21 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: HasInventoryItem
-    parameters:
-    - ae8ff6c0-e5c8-45f0-8eb3-ae6a3eef6695
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - Mother Hubbard's Bunions
+        negate: 0
+    - or:
+      - predicate: CompletedQuest
+        parameters:
+        - Mother Hubbard's Bunions
+        negate: 0
+      - predicate: HasInventoryItem
+        parameters:
+        - ae8ff6c0-e5c8-45f0-8eb3-ae6a3eef6695
+        negate: 0
 --- !u!114 &-4137686172726879651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52,8 +64,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &-3109864996430553877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,9 +90,17 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: HasQuest
-    parameters:
-    - Mother Hubbard's Bunions
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - Mother Hubbard's Bunions
+        negate: 0
+    - or:
+      - predicate: CompletedQuest
+        parameters:
+        - Mother Hubbard's Bunions
+        negate: 1
 --- !u!114 &-2271710361055957622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,15 +119,19 @@ MonoBehaviour:
   - e1eb763c-1ac2-4c0b-9eeb-40064dcb61dc
   rect:
     serializedVersion: 2
-    x: 386
-    y: 221
+    x: 389
+    y: 220
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - Mother Hubbard's Bunions
+        negate: 1
 --- !u!114 &-131027423210991627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,8 +156,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,8 +203,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: GiveQuest
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &6622572908394205883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,8 +228,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &9158298464127834625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,5 +257,4 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
